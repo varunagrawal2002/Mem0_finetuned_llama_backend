@@ -1,10 +1,10 @@
 ## Mem0 Small Model Integration
 
-A research project integrating Mem0's memory layer with a fine-tuned Llama 3.1 8B Instruct model for memory-driven conversational AI on limited hardware.
+A project integrating Mem0's memory layer with a fine-tuned Llama 3.1 8B Instruct model for memory-driven conversational AI on limited hardware.
 
 ## Overview
 
-This project implements a complete pipeline for fine-tuning small LLMs and integrating them with Mem0's hybrid memory system. The system enables personalized AI conversations that remember context across sessions while running efficiently on consumer hardware.
+This project implements a complete pipeline for fine-tuning small LLMs like Llama 3.1 8B Instruct and integrating them with Mem0's hybrid memory system. The system enables personalized AI conversations that remember context across sessions while running efficiently on consumer hardware.
 
 ## Project Structure
 
@@ -21,7 +21,7 @@ This project implements a complete pipeline for fine-tuning small LLMs and integ
 ├── data_download/
 │   ├── coqa_mctest_5000_samples.jsonl            # Training dataset for fine-tuning
 │   ├── benchmark_prompts_latency.jsonl          # Inference test prompts
-│   └── benchmark_test_retreivel_quality.jsonl  # Retrieval test data
+├── benchmark_test_retreivel_quality.jsonl  # Retrieval test data
 └── README.md
 ````
 
@@ -130,7 +130,7 @@ ollama create fine_tuned:latest -f Modelfile
 
 ## Mem0 Configuration
 
-### Backend Setup (mem0_config.py)
+### Backend Setup (mem0_backend/mem0_config.py)
 
 ```python
 CONFIG = {
@@ -155,7 +155,7 @@ CONFIG = {
         "config": {
             "collection_name": "mem0_chat",
             "embedding_model_dims": 1024,
-            "path": "./qdrant_chat_db_cli"
+            "path": "./qdrant_chat_db"
         }
     },
     "version": "v1.0"
@@ -186,19 +186,12 @@ python mem0_backend/cli_chat.py
 
 ```text
 You: Hello, my name is Varun and I work at XYZ
-
 🤖 Nice to meet you, Varun! It's great to connect with someone from XYZ...
 💭 Used 0 memories
 ✓ Conversation saved to memory
 
-You: /search work
-📚 Found 1 memories:
-1. User asked: Hello, my name is Varun and I work at XYZ
-   Assistant replied: Nice to meet you...
-   Score: 0.847
-
 You: What's my name?
-📚 Found 1 memories (searching context)
+📚 Found 1 memories:
 🤖 Your name is Varun.
 💭 Used 1 memories
 ✓ Conversation saved to memory
@@ -279,7 +272,7 @@ run_benchmark_without_memo.py
 
 Evaluates Mem0's semantic search accuracy (set the model in benchmarks/mem0_config.py):
 
-### Understanding the Retrieval Metrics
+**Measured Metrics:**
 
 The benchmark evaluates retrieval quality by checking if the correct memory (`ground_truth_id`) is returned within the top 5 search results.
 
@@ -296,6 +289,8 @@ The benchmark evaluates retrieval quality by checking if the correct memory (`gr
     * ...
     * Not found in top 5 = **0** points
     * A perfect score (always #1) is **1.0**.
+
+Output: `benchmark_results_baseline(or finetuned).json`
 
 ```bash
 python run_benchmark_retrievel.py
