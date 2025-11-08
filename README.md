@@ -1,7 +1,4 @@
-Here is the cleaned-up content, formatted correctly for a `README.md` file. I've structured the headings, fixed the code blocks, and removed the citation artifacts for a clean, copy-paste-ready file.
-
-````markdown
-# README: Mem0 Small Model Integration
+## Mem0 Small Model Integration
 
 A research project integrating Mem0's memory layer with a fine-tuned Llama 3.1 8B Instruct model for memory-driven conversational AI on limited hardware.
 
