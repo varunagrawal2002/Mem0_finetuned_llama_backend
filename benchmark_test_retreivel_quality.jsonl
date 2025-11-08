@@ -1,0 +1,610 @@
+    {
+        "memory": "During the Q3 planning meeting, the 'Nexus' team committed to refactoring the entire authentication service. This is a high-priority task because the current system has major security vulnerabilities. The estimated completion date is October 15th.",
+        "query": "What was the main outcome of the Q3 Nexus team meeting?",
+        "answer": "The Nexus team committed to refactoring the authentication service due to security vulnerabilities, with an estimated completion date of October 15th.",
+        "ground_truth_id": "mem_20"
+    },
+    {
+        "memory": "My manager, David Lee, approved my vacation request for December 20th to January 2nd. He specifically asked me to ensure all my active projects are handed over to Sarah Jenkins before I leave.",
+        "query": "What do I need to do before my December vacation?",
+        "answer": "You need to hand over all active projects to Sarah Jenkins before your vacation, which is from Dec 20th to Jan 2nd.",
+        "ground_truth_id": "mem_21"
+    },
+    {
+        "memory": "The 'Atlas' project post-mortem revealed that our biggest bottleneck was the QA environment setup. It took three weeks longer than planned. We agreed to invest in infrastructure-as-code (IaC) using Terraform to prevent this in the future.",
+        "query": "What was the key lesson from the Atlas project failure?",
+        "answer": "The main bottleneck was the 3-week delay in QA environment setup, which we plan to fix in the future by using Terraform for IaC.",
+        "ground_truth_id": "mem_22"
+    },
+    {
+        "memory": "I've been assigned as the new technical lead for the 'Orion' integration. My main contacts will be Jane Doe from the partner company (jane.doe@partner.com) and our internal stakeholder, Mark Chen.",
+        "query": "Who are my key contacts for the Orion project?",
+        "answer": "Your key contacts are Jane Doe from the partner company and Mark Chen, our internal stakeholder.",
+        "ground_truth_id": "mem_23"
+    },
+    {
+        "memory": "Feedback from the last sprint review was mixed. Users loved the new dashboard UI but complained that the data-loading speed is unacceptably slow, especially on the 'Analytics' page. We need to prioritize backend optimization.",
+        "query": "What was the user feedback from the last sprint?",
+        "answer": "Users loved the new dashboard UI but complained about slow data-loading on the 'Analytics' page, so backend optimization is the new priority.",
+        "ground_truth_id": "mem_24"
+    },
+    {
+        "memory": "Our team's new on-call rotation starts next Monday. I am the primary contact for the first week (Week 1). Alex will be my secondary (backup). The emergency hotline number is 555-1234.",
+        "query": "When does my on-call duty start and who is my backup?",
+        "answer": "Your on-call rotation starts next Monday. You are the primary for the first week, and Alex is your secondary.",
+        "ground_truth_id": "mem_25"
+    },
+    {
+        "memory": "The legal department just sent a memo that all new open-source libraries must be approved by the security team. This applies to 'Project Titan' immediately. I need to submit 'D3.js' and 'pandas' for review.",
+        "query": "What's the new policy for using open-source libraries on Project Titan?",
+        "answer": "All new open-source libraries, like 'D3.js' and 'pandas' for Project Titan, must be approved by the security team.",
+        "ground_truth_id": "mem_26"
+    },
+    {
+        "memory": "My performance goals for this quarter are: 1) Increase API endpoint performance by 15%, and 2) Mentor the new junior developer, Kevin. My stretch goal is to complete the AWS Solutions Architect certification.",
+        "query": "What are my professional goals right now?",
+        "answer": "Your goals are to increase API performance by 15% and mentor Kevin. Your stretch goal is to get the AWS Solutions Architect certification.",
+        "ground_truth_id": "mem_27"
+    },
+    {
+        "memory": "Client 'GlobalCorp' is very unhappy with our reporting module. They claim the data is 'frequently stale' by at least 24 hours. We need to investigate our data pipeline's refresh rate.",
+        "query": "What's the major complaint from the GlobalCorp client?",
+        "answer": "They are unhappy with the reporting module, claiming the data is frequently stale by at least 24 hours.",
+        "ground_truth_id": "mem_28"
+    },
+    {
+        "memory": "I had a brainstorming session for the new marketing campaign, 'FreshStart'. My best idea was a user-generated content contest on Instagram. The team seemed to like it, and we're mocking up a proposal.",
+        "query": "What was my main contribution to the 'FreshStart' campaign idea?",
+        "answer": "You proposed a user-generated content contest on Instagram, which the team is now mocking up.",
+        "ground_truth_id": "mem_29"
+    },
+    
+    # --- Personal & Family ---
+    {
+        "memory": "My sister, Emily, is allergic to peanuts and shellfish. Her birthday is next month, and I was thinking of baking her a cake, so I must use almond flour and sunflower seed butter instead.",
+        "query": "What allergies does Emily have?",
+        "answer": "Emily is allergic to peanuts and shellfish.",
+        "ground_truth_id": "mem_30"
+    },
+    {
+        "memory": "I just renewed my car insurance with 'AutoSafe'. The policy number is #POL-987654. The renewal date is November 1st, 2026, and I'm paying $120 per month.",
+        "query": "What's my car insurance policy number?",
+        "answer": "Your policy number with 'AutoSafe' is #POL-987654.",
+        "ground_truth_id": "mem_31"
+    },
+    {
+        "memory": "My father's 60th birthday party is on Saturday, September 10th, at 6 PM at The Oak Room. I'm in charge of bringing the projector for the photo slideshow.",
+        "query": "What am I responsible for at dad's birthday party?",
+        "answer": "You are responsible for bringing the projector for the photo slideshow.",
+        "ground_truth_id": "mem_32"
+    },
+    {
+        "memory": "We just adopted a rescue dog, a golden retriever mix named 'Buddy'. The vet said he needs to be on a grain-free diet and needs his heartworm medication on the 1st of every month.",
+        "query": "What are the care instructions for my new dog, Buddy?",
+        "answer": "Buddy needs to be on a grain-free diet and must get his heartworm medication on the 1st of each month.",
+        "ground_truth_id": "mem_33"
+    },
+    {
+        "memory": "My partner and I are saving for a house down payment. We agreed to set aside $1,500 each month into our joint savings account (ending in ...5678). Our target is $80,000.",
+        "query": "What's our savings plan for the house?",
+        "answer": "You are saving $1,500 per month in the joint savings account (...5678) with a target of $80,000.",
+        "ground_truth_id": "mem_34"
+    },
+    {
+        "memory": "I finally fixed the leaky faucet in the upstairs bathroom. The problem was a worn-out O-ring in the hot water handle. I bought a 10-pack of replacements (size 'A-12') at Home Depot.",
+        "query": "How did I fix the leaky faucet?",
+        "answer": "You replaced a worn-out O-ring (size 'A-12') in the hot water handle.",
+        "ground_truth_id": "mem_35"
+    },
+    {
+        "memory": "My new landlord's name is Mr. Henderson, and his phone number is 555-9876. Rent is due on the 1st, and he prefers payment via Zelle to his email: 'henderson.rentals@email.com'.",
+        "query": "How do I pay my rent?",
+        "answer": "Pay rent on the 1st via Zelle to the landlord's (Mr. Henderson's) email: 'henderson.rentals@email.com'.",
+        "ground_truth_id": "mem_36"
+    },
+    {
+        "memory": "My daughter, Sophie, has her piano recital on Friday at 7 PM. I promised her I would be in the front row and that we would go for ice cream afterward to celebrate.",
+        "query": "What are the plans for Sophie's recital?",
+        "answer": "The recital is Friday at 7 PM. You promised to sit in the front row and go for ice cream afterward.",
+        "ground_truth_id": "mem_37"
+    },
+    {
+        "memory": "My annual physical is scheduled with Dr. Patel on October 28th at 10:00 AM. They reminded me to fast for 12 hours beforehand for the blood work.",
+        "query": "What do I need to remember for my upcoming doctor's appointment?",
+        "answer": "Your appointment is with Dr. Patel on Oct 28th at 10 AM, and you must fast for 12 hours before.",
+        "ground_truth_id": "mem_38"
+    },
+    {
+        "memory": "My uncle Joe recommended a great financial advisor named Maria Torres. He said she specializes in retirement planning for tech employees. Her office is on 123 Main St.",
+        "query": "Who was that financial advisor my uncle recommended?",
+        "answer": "Your uncle Joe recommended Maria Torres, who specializes in retirement planning for tech employees.",
+        "ground_truth_id": "mem_39"
+    },
+
+    # --- Hobbies & Interests ---
+    {
+        "memory": "I'm currently reading 'Dune' by Frank Herbert. I'm about halfway through and finding the political intrigue more interesting than the action. I need to remember to buy the sequel, 'Dune Messiah'.",
+        "query": "What am I thinking about the book I'm reading?",
+        "answer": "You are reading 'Dune' and find the political intrigue more interesting than the action. You want to buy the sequel, 'Dune Messiah'.",
+        "ground_truth_id": "mem_40"
+    },
+    {
+        "memory": "My sourdough starter, which I named 'Doughbi-Wan', seems to be struggling. It's not rising as much. I'm going to try switching to a 100% rye flour feeding schedule (1:2:2 ratio) starting tomorrow.",
+        "query": "How am I trying to fix my sourdough starter?",
+        "answer": "Your starter ('Doughbi-Wan') is not rising, so you are switching to a 100% rye flour feeding schedule at a 1:2:2 ratio.",
+        "ground_truth_id": "mem_41"
+    },
+    {
+        "memory": "I've been practicing the 'Wonderwall' chords on my guitar, but I'm having trouble with the F-major barre chord. My fingers keep muting the high E string. I should watch some YouTube tutorials on finger placement.",
+        "query": "What guitar chord am I struggling with?",
+        "answer": "You are struggling with the F-major barre chord for 'Wonderwall', as your fingers keep muting the high E string.",
+        "ground_truth_id": "mem_42"
+    },
+    {
+        "memory": "My best 5K running time is 24:30, which I set last April. I'm training for the upcoming 'Turkey Trot' race and my goal is to break 24 minutes. My current training plan involves interval runs on Tuesdays.",
+        "query": "What's my 5K running goal?",
+        "answer": "Your goal is to break 24 minutes at the 'Turkey Trot' race. Your current best is 24:30, and you are doing interval runs on Tuesdays.",
+        "ground_truth_id": "mem_43"
+    },
+    {
+        "memory": "I'm building a new PC. I've decided on the 'NVIDIA RTX 5070' GPU and the 'AMD Ryzen 9 9900X' CPU. I'm still debating between 32GB and 64GB of DDR5 RAM.",
+        "query": "What are the specs for the new PC I'm building?",
+        "answer": "You've chosen the NVIDIA RTX 5070 GPU and AMD Ryzen 9 9900X CPU, and are deciding between 32GB or 64GB of RAM.",
+        "ground_truth_id": "mem_44"
+    },
+    {
+        "memory": "I loved the movie 'Blade Runner 2049'. The cinematography and world-building were incredible. I thought the score by Hans Zimmer was a masterpiece, perfectly capturing the film's tone.",
+        "query": "What did I think of the Blade Runner sequel?",
+        "answer": "You loved 'Blade Runner 2049', especially the cinematography, world-building, and the 'masterpiece' score by Hans Zimmer.",
+        "ground_truth_id": "mem_45"
+    },
+    {
+        "memory": "I'm trying to learn Japanese using the Duolingo app. I'm finding the grammar particles 'wa' (は) and 'ga' (が) very confusing. I need to find a dedicated grammar guide to explain the difference.",
+        "query": "What's the hardest part of learning Japanese for me?",
+        "answer": "You are finding the grammar particles 'wa' (は) and 'ga' (が) very confusing and need a better grammar guide.",
+        "ground_truth_id": "mem_46"
+    },
+    {
+        "memory": "My subscription to 'CodeMonthly' magazine is expiring in January. I don't think I'll renew it because most of the articles are too basic. I'm thinking of subscribing to 'ACM Queue' instead.",
+        "query": "Why am I canceling my 'CodeMonthly' subscription?",
+        "answer": "You are not renewing because the articles are too basic, and you are considering subscribing to 'ACM Queue' instead.",
+        "ground_truth_id": "mem_47"
+    },
+    {
+        "memory": "I've been playing the game 'Elden Ring'. I finally beat the boss 'Malenia' after 3 days of trying. The key was using the 'Rivers of Blood' katana and dodging her 'Waterfowl Dance' attack.",
+        "query": "How did I beat that really hard boss in Elden Ring?",
+        "answer": "You finally beat 'Malenia' after 3 days by using the 'Rivers of Blood' katana and dodging her 'Waterfowl Dance' attack.",
+        "ground_truth_id": "mem_48"
+    },
+    {
+        "memory": "I'm planning a camping trip to Yosemite in July. I managed to book the 'Upper Pines' campground (Site #112). I must remember to buy a bear canister, as it's required.",
+        "query": "What are my Yosemite trip details?",
+        "answer": "You are camping at 'Upper Pines' (Site #112) in July and must remember to buy a required bear canister.",
+        "ground_truth_id": "mem_49"
+    },
+
+    # --- Technical & Learning ---
+    {
+        "memory": "I'm studying for my cloud certification and learned about the difference between 'horizontal scaling' (scaling out by adding more machines) and 'vertical scaling' (scaling up by adding more power, like CPU/RAM, to an existing machine).",
+        "query": "What's the difference between horizontal and vertical scaling?",
+        "answer": "Horizontal scaling (scaling out) is adding more machines, while vertical scaling (scaling up) is adding more power (CPU/RAM) to one machine.",
+        "ground_truth_id": "mem_50"
+    },
+    {
+        "memory": "I read an article about 'Retrieval-Augmented Generation' (RAG). It improves LLM accuracy by fetching external documents and adding them to the prompt as context, which helps reduce hallucinations.",
+        "query": "What is RAG and how does it help LLMs?",
+        "answer": "RAG (Retrieval-Augmented Generation) improves LLMs by fetching external documents and adding them to the prompt as context, which helps reduce hallucinations.",
+        "ground_truth_id": "mem_51"
+    },
+    {
+        "memory": "My Python script is running slowly. The profiler shows that 80% of the time is spent in a nested loop doing string concatenation. I should rewrite this to use a 'list.join()' method instead.",
+        "query": "How can I optimize my slow Python script?",
+        "answer": "The profiler showed a bottleneck in a nested loop doing string concatenation. You should rewrite it to use 'list.join()'.",
+        "ground_truth_id": "mem_52"
+    },
+    {
+        "memory": "I learned the hard way that 'git rebase -i' is destructive and rewrites commit history. I should use 'git merge' instead when working on shared branches to avoid force-pushing and messing up my team's history.",
+        "query": "When should I avoid using 'git rebase'?",
+        "answer": "You should avoid using 'git rebase' on shared branches because it rewrites history. Use 'git merge' instead to avoid issues for your team.",
+        "ground_truth_id": "mem_53"
+    },
+    {
+        "memory": "The main difference between TCP and UDP is that TCP is connection-oriented and guarantees ordered delivery (like a phone call), while UDP is connectionless and does not (like sending a postcard). UDP is faster and used for things like video streaming.",
+        "query": "What's the main difference between TCP and UDP?",
+        "answer": "TCP is a reliable, connection-oriented protocol that guarantees order (like a phone call), while UDP is faster, connectionless, and doesn't guarantee order (like a postcard).",
+        "ground_truth_id": "mem_54"
+    },
+    {
+        "memory": "I'm trying to containerize my 'Node.js' app with 'Docker'. I need to make sure my '.dockerignore' file includes 'node_modules/' so I don't copy the local development modules into the image. The build should use 'npm ci' for a clean install.",
+        "query": "What's important to remember when Dockerizing my Node app?",
+        "answer": "You must add 'node_modules/' to your '.dockerignore' file and use 'npm ci' inside the Dockerfile for a clean, reproducible install.",
+        "ground_truth_id": "mem_55"
+    },
+    {
+        "memory": "In SQL, a 'LEFT JOIN' will return all rows from the left table and the matched rows from the right table. If there is no match, the columns from the right table will be 'NULL'. An 'INNER JOIN' only returns rows where there is a match in *both* tables.",
+        "query": "What's the difference between a LEFT JOIN and an INNER JOIN?",
+        "answer": "A LEFT JOIN returns all rows from the left table and NULLs for non-matches from the right. An INNER JOIN only returns rows that match in both tables.",
+        "ground_truth_id": "mem_56"
+    },
+    {
+        "memory": "I'm setting up a new CI/CD pipeline in GitHub Actions. The 'workflow_dispatch' event trigger allows me to run the pipeline manually from the GitHub UI, which is useful for ad-hoc deployments.",
+        "query": "How can I manually trigger my GitHub Actions pipeline?",
+        "answer": "You can manually trigger it by adding the 'workflow_dispatch' event to your workflow file, which adds a 'Run workflow' button in the UI.",
+        "ground_truth_id": "mem_57"
+    },
+    {
+        "memory": "I finally understood how 'async/await' works in JavaScript. The 'await' keyword pauses the execution of an 'async' function until a 'Promise' is settled (either resolved or rejected). It makes asynchronous code look synchronous.",
+        "query": "Can you explain async/await in JavaScript to me?",
+        "answer": "The 'await' keyword pauses an 'async' function until a Promise settles, making asynchronous code easier to read, as if it were synchronous.",
+        "ground_truth_id": "mem_58"
+    },
+    {
+        "memory": "A 'REST API' is an architectural style, whereas 'GraphQL' is a query language for APIs. With GraphQL, the client can request *exactly* the data it needs, which can prevent over-fetching or under-fetching of data common with REST.",
+        "query": "What's the advantage of GraphQL over REST?",
+        "answer": "GraphQL's main advantage is that it allows the client to request exactly the data it needs, which prevents the over-fetching or under-fetching of data.",
+        "ground_truth_id": "mem_59"
+    },
+
+    # --- Opinions & Preferences ---
+    {
+        "memory": "I'm not a fan of the new 'Material You' design update on my Android phone. The colors are too pastel, and the widgets are oversized. I much preferred the cleaner look of Android 11.",
+        "query": "Why don't I like the new Android update?",
+        "answer": "You don't like the 'Material You' update because the colors are too pastel and the widgets are oversized; you preferred the cleaner look of Android 11.",
+        "ground_truth_id": "mem_60"
+    },
+    {
+        "memory": "My favorite coffee shop is 'The Daily Grind'. They have the best cold brew, and the baristas are always friendly. It's also one of the few places with comfortable seating and reliable, fast WiFi.",
+        "query": "Why is 'The Daily Grind' my favorite cafe?",
+        "answer": "It's your favorite because it has the best cold brew, friendly baristas, comfortable seating, and reliable, fast WiFi.",
+        "ground_truth_id": "mem_61"
+    },
+    {
+        "memory": "I've decided I'm a 'Vim' person, not an 'Emacs' person. I find Vim's modal editing to be much more efficient for coding once I got past the steep learning curve. The keybindings feel more natural.",
+        "query": "Why do I prefer Vim over Emacs?",
+        "answer": "You prefer Vim because you find its modal editing and keybindings more efficient and natural for coding after overcoming the learning curve.",
+        "ground_truth_id": "mem_62"
+    },
+    {
+        "memory": "I strongly believe that remote work is more productive for me. I can focus without office distractions, and I save two hours a day on commuting. I feel less stressed and get more deep work done.",
+        "query": "What's my opinion on remote work?",
+        "answer": "You strongly believe remote work is more productive for you because you can focus without distractions, save time on commuting, feel less stressed, and get more deep work done.",
+        "ground_truth_id": "mem_63"
+    },
+    {
+        "memory": "I'm not going to buy the new 'Call of Duty' game this year. The last three installments have been too repetitive, and I'm tired of the 'battle royale' trend. I'm looking for a good single-player story-driven game instead.",
+        "query": "Why am I skipping Call of Duty this year?",
+        "answer": "You're skipping it because you find the series too repetitive and are tired of the 'battle royale' trend, preferring a single-player, story-driven game.",
+        "ground_truth_id": "mem_64"
+    },
+    {
+        "memory": "My favorite podcast is 'Hardcore History'. I love the host's long-form, detailed storytelling. The episode on the 'Mongol Empire' was particularly fascinating and gave me a new perspective.",
+        "query": "What's that history podcast I like so much?",
+        "answer": "Your favorite podcast is 'Hardcore History' because you love the long-form, detailed storytelling, especially the episode on the 'Mongol Empire'.",
+        "ground_truth_id": "mem_65"
+    },
+    {
+        "memory": "I've tried both 'React' and 'Vue' for frontend development. I prefer 'Vue' because of its simpler API, better documentation, and the way it cleanly separates HTML, CSS, and JS in single-file components.",
+        "query": "Why do I prefer Vue to React?",
+        "answer": "You prefer 'Vue' because of its simpler API, better documentation, and its clean separation of concerns in single-file components.",
+        "ground_truth_id": "mem_66"
+    },
+    {
+        "memory": "I think 'The Office (US)' is overrated. While I appreciate the humor, I find the 'cringe' comedy style to be too uncomfortable to watch most of the time. I much prefer the witty, fast-paced dialogue of 'Parks and Recreation'.",
+        "query": "What's my unpopular opinion about 'The Office'?",
+        "answer": "You think 'The Office (US)' is overrated because the 'cringe' comedy is too uncomfortable, and you prefer the style of 'Parks and Recreation'.",
+        "ground_truth_id": "mem_67"
+    },
+    {
+        "memory": "My 'Logitech MX Master 3' mouse is the best piece of tech I've bought all year. The ergonomic design is perfect, and the 'MagSpeed' scroll wheel is a game-changer for long documents and code.",
+        "query": "What do I think of my new mouse?",
+        "answer": "You think your 'Logitech MX Master 3' mouse is the best tech you bought this year due to its ergonomic design and the 'MagSpeed' scroll wheel.",
+        "ground_truth_id": "mem_68"
+    },
+    {
+        "memory": "I find I'm most creative and productive in the early morning, from about 6 AM to 9 AM. After lunch, my energy dips significantly, and I'm better off doing administrative tasks or answering emails.",
+        "query": "When is my most productive time of day?",
+        "answer": "Your most productive and creative time is in the early morning, from 6 AM to 9 AM. You're better at administrative tasks after lunch.",
+        "ground_truth_id": "mem_69"
+    },
+    {
+        "memory": "Found a critical bug (T-982) in the payment module. It's a race condition that happens when two users check out simultaneously. The current workaround is to add a distributed lock using Redis. Mark's team is on it.",
+        "query": "What's the status of that critical payment bug?",
+        "answer": "It's a race condition (T-982) in the payment module. Mark's team is adding a distributed lock with Redis as a workaround.",
+        "ground_truth_id": "mem_70"
+    },
+    {
+        "memory": "Client 'Innovate Inc.' just signed the 12-month contract renewal for $250k. They are very happy with the platform's stability but have requested a new feature: a dedicated 'admin audit log' for compliance. This is now a top priority for Q1.",
+        "query": "What was the result of the Innovate Inc. renewal?",
+        "answer": "They renewed for 12 months ($250k) and are happy, but they requested an 'admin audit log' feature, which is now a Q1 priority.",
+        "ground_truth_id": "mem_71"
+    },
+    {
+        "memory": "The candidate, 'Priya Sharma', was excellent in the technical interview. She aced the system design question on scaling a 'tiny URL' service. We should definitely move her to the final round with the VP. Her salary expectation is $140k.",
+        "query": "How did Priya Sharma's interview go?",
+        "answer": "She was excellent, acing the system design question (scaling a tiny URL service). We are moving her to the final round. Her salary expectation is $140k.",
+        "ground_truth_id": "mem_72"
+    },
+    {
+        "memory": "Our cloud costs on AWS went up 20% last month. The cost explorer shows the 'S3-Standard' storage class is the main culprit. We need to implement a lifecycle policy to move old data to 'Glacier Deep Archive'.",
+        "query": "Why did our AWS bill go up and how do we fix it?",
+        "answer": "Costs rose 20% due to 'S3-Standard' storage. We need to create a lifecycle policy to move old data to 'Glacier Deep Archive'.",
+        "ground_truth_id": "mem_73"
+    },
+    {
+        "memory": "The company's new WFH (Work From Home) policy for 2026 is a 3-2 hybrid model. Three days in the office (Mon, Tue, Thu) and two days remote. This is mandatory for all departments starting Feb 1st.",
+        "query": "What's the new company hybrid model?",
+        "answer": "It's a 3-2 hybrid model (3 days in, 2 remote) starting Feb 1st. In-office days are Monday, Tuesday, and Thursday.",
+        "ground_truth_id": "mem_74"
+    },
+    {
+        "memory": "Our main competitor, 'ZenDesk', just launched an AI-powered 'Instant Reply' feature. Our product team feels this is a major threat. We are fast-tracking our own 'Project Assist' to counter it.",
+        "query": "What did ZenDesk just launch?",
+        "answer": "They launched an AI-powered 'Instant Reply' feature. We see it as a threat and are fast-tracking our 'Project Assist' to compete.",
+        "ground_truth_id": "mem_75"
+    },
+    {
+        "memory": "I'm giving a presentation at the all-hands meeting next week. The topic is 'The Future of WebAssembly'. I need to finish my slides, especially the one on the 'WASI' (WebAssembly System Interface).",
+        "query": "What's my upcoming presentation about?",
+        "answer": "You are presenting on 'The Future of WebAssembly' at the next all-hands, and you need to finish your slides, especially the one on 'WASI'.",
+        "ground_truth_id": "mem_76"
+    },
+    {
+        "memory": "The vendor for our new office furniture, 'Steelcase', has confirmed delivery for December 3rd. However, they can't install the standing desks until December 5th due to staffing.",
+        "query": "When is the new office furniture arriving?",
+        "answer": "The 'Steelcase' furniture will be delivered on Dec 3rd, but the standing desks won't be installed until Dec 5th.",
+        "ground_truth_id": "mem_77"
+    },
+    {
+        "memory": "I had a 1-on-1 with my direct report, Ben. He's feeling burnt out from the 'Atlas' project's long hours. I approved his request to take next Friday off and told him to block 'no-meeting' time in his calendar.",
+        "query": "What was my last 1-on-1 with Ben about?",
+        "answer": "He is feeling burnt out from the 'Atlas' project. You approved his request for next Friday off and suggested he block 'no-meeting' time.",
+        "ground_truth_id": "mem_78"
+    },
+    {
+        "memory": "Our API service level objective (SLO) for p95 latency is 500ms. We breached it three times last week, traced back to a slow database query. We need to add an index to the 'users_events' table on the 'timestamp' column.",
+        "query": "Why is our API latency bad and what's the fix?",
+        "answer": "We breached our 500ms p95 latency SLO due to a slow DB query. The fix is to add an index to the 'users_events' table on the 'timestamp' column.",
+        "ground_truth_id": "mem_79"
+    },
+    {
+        "memory": "I just moved $10,000 from my checking account into my Vanguard brokerage account (VTI). This is part of my long-term strategy to max out my ETF investments for the year. I should not touch this.",
+        "query": "What was that large transfer I made recently?",
+        "answer": "You moved $10,000 from checking to your Vanguard account (VTI) as part of your long-term ETF investment strategy.",
+        "ground_truth_id": "mem_80"
+    },
+    {
+        "memory": "My new eye prescription from Dr. Ahn is -2.75 for the left eye and -2.50 for the right. She also noted signs of digital eye strain and recommended using blue-light filtering glasses and the 20-20-20 rule.",
+        "query": "What did the eye doctor tell me?",
+        "answer": "Your new prescription is -2.75 (left) and -2.50 (right). Dr. Ahn also recommended blue-light glasses and the 20-20-20 rule for eye strain.",
+        "ground_truth_id": "mem_81"
+    },
+    {
+        "memory": "I filed a claim with 'Lemonade' insurance for the water damage in my kitchen. The claim number is #LM-45A8. The adjuster, Mike, is scheduled to come by this Wednesday at 2 PM.",
+        "query": "What's the status of my water damage insurance claim?",
+        "answer": "Your claim (#LM-45A8) is filed with 'Lemonade'. The adjuster, Mike, is scheduled to visit this Wednesday at 2 PM.",
+        "ground_truth_id": "mem_82"
+    },
+    {
+        "memory": "My accountant, Sarah, advised me that since I'm doing freelance work, I need to make quarterly estimated tax payments. The next deadline is January 15th. I should set aside at least 25% of my freelance income.",
+        "query": "What did my accountant say about my freelance taxes?",
+        "answer": "She said you must make quarterly estimated tax payments. The next deadline is Jan 15th, and you should set aside 25% of your freelance income.",
+        "ground_truth_id": "mem_83"
+    },
+    {
+        "memory": "I'm trying a new intermittent fasting schedule: 16:8. My eating window is from 12:00 PM (noon) to 8:00 PM. I'm doing this to try and improve my energy levels, not just for weight loss.",
+        "query": "What's this new diet I'm trying?",
+        "answer": "You are trying a 16:8 intermittent fasting schedule (eating from noon to 8 PM) to improve your energy levels.",
+        "ground_truth_id": "mem_84"
+    },
+    {
+        "memory": "I just refinanced my mortgage. The new rate is 4.75% fixed for 30 years with 'Better Mortgage'. This will lower my monthly payment by about $220. The closing costs were $4,500.",
+        "query": "What were the terms of my mortgage refinance?",
+        "answer": "You refinanced to a 4.75% 30-year fixed rate with 'Better Mortgage', lowering your payment by $220/month. Closing costs were $4,500.",
+        "ground_truth_id": "mem_85"
+    },
+    {
+        "memory": "My blood test results came back. My Vitamin D levels are low (22 ng/mL). Dr. Patel recommended I take a 2000 IU Vitamin D3 supplement daily, especially during the winter.",
+        "query": "What were my recent blood test results?",
+        "answer": "Your Vitamin D levels were low (22 ng/mL). Dr. Patel recommended a 2000 IU daily Vitamin D3 supplement.",
+        "ground_truth_id": "mem_86"
+    },
+    {
+        "memory": "I'm selling my old 2018 Honda Civic. I listed it on AutoTrader for $16,500. The VIN is #1HGFK...789. It has 62,000 miles and a small scratch on the rear bumper.",
+        "query": "What are the details for the car I'm selling?",
+        "answer": "You are selling your 2018 Honda Civic for $16,500. It has 62,000 miles and a small scratch on the rear bumper. The VIN is #1HGFK...789.",
+        "ground_truth_id": "mem_87"
+    },
+    {
+        "memory": "The roof inspector said the shingles on the south side are curling and are near the end of their 20-year life. He quoted us $8,000 for a replacement. He said we have about 1-2 years before it becomes a leak risk.",
+        "query": "What did the roof inspector say?",
+        "answer": "The south-side shingles are curling and need replacement. He quoted $8,000 and said we have 1-2 years before it becomes a leak risk.",
+        "ground_truth_id": "mem_88"
+    },
+    {
+        "memory": "I just signed up for a new credit card, the 'Chase Sapphire Reserve', to get the travel points. The annual fee is $550, but it includes a $300 travel credit and Priority Pass lounge access. I need to spend $4,000 in 3 months to get the bonus.",
+        "query": "Why did I get that new Chase credit card?",
+        "answer": "You got the 'Sapphire Reserve' for travel points. It has a $550 fee but includes a $300 travel credit and lounge access. You must spend $4,000 in 3 months for the bonus.",
+        "ground_truth_id": "mem_89"
+    },
+
+    {
+        "memory": "I've booked my flight to Berlin for the tech conference. I fly on Lufthansa (LH 456) on March 3rd, landing at 9:00 AM. My hotel is The 'InterContinental', and my confirmation number is #B-6789. I need to remember to pack a European power adapter.",
+        "query": "What are my Berlin trip details?",
+        "answer": "You fly Lufthansa (LH 456) on March 3rd, landing at 9 AM. You're staying at The InterContinental (Conf: #B-6789) and need a power adapter.",
+        "ground_truth_id": "mem_90"
+    },
+    {
+        "memory": "I had a long talk with my friend Alex last night. He's thinking of quitting his job at the law firm to become a chef. He seems really passionate about it but is worried about the pay cut. I told him to make a solid business plan first.",
+        "query": "What was that deep conversation I had with Alex about?",
+        "answer": "You talked about him wanting to quit his law job to become a chef. You advised him to make a solid business plan first due to his worry about the pay cut.",
+        "ground_truth_id": "mem_91"
+    },
+    {
+        "memory": "This weekend's plans: Saturday morning, I have a dentist appointment at 10 AM. On Saturday night, we have dinner reservations at 'Osteria' at 8 PM for Maria's birthday. Sunday is for laundry and relaxing.",
+        "query": "What am I doing this weekend?",
+        "answer": "You have a dentist appointment at 10 AM Saturday. That night, you have dinner at 'Osteria' at 8 PM for Maria's birthday. Sunday is for relaxing.",
+        "ground_truth_id": "mem_92"
+    },
+    {
+        "memory": "I bought tickets to see 'The National' in concert. The show is on May 17th at the 'Greek Theatre'. The seats are in Section B, Row 12. I bought them on Ticketmaster, and they are in my digital wallet.",
+        "query": "When am I seeing 'The National'?",
+        "answer": "You are seeing them on May 17th at the 'Greek Theatre'. Your seats are in Section B, Row 12, and the tickets are in your Ticketmaster wallet.",
+        "ground_truth_id": "mem_93"
+    },
+    {
+        "memory": "My cousin Chloe is getting married in New Orleans in June. The wedding is at the 'Hotel Peter & Paul'. I need to RSVP by May 1st and book my flight soon. The dress code is 'Garden Party Cocktail'.",
+        "query": "What are the details for Chloe's wedding?",
+        "answer": "The wedding is in June at the 'Hotel Peter & Paul' in New Orleans. You need to RSVP by May 1st and book a flight. The dress code is 'Garden Party Cocktail'.",
+        "ground_truth_id": "mem_94"
+    },
+    {
+        "memory": "I had an argument with my partner about the household chores. We agreed to a new system: I'm responsible for all the cooking and kitchen cleanup, and they are responsible for laundry and vacuuming. We'll split the bathroom cleaning.",
+        "query": "What was that new chore agreement we made?",
+        "answer": "You agreed that you will handle cooking and kitchen cleanup, your partner will handle laundry and vacuuming, and you will split bathroom cleaning.",
+        "ground_truth_id": "mem_95"
+    },
+    {
+        "memory": "I'm hosting a game night this Friday. So far, Chris, Megan, and Sam are coming. I need to buy snacks (chips, salsa, and pretzels) and pick up a new copy of 'Catan' because my old one is missing pieces.",
+        "query": "What do I need to do for game night on Friday?",
+        "answer": "You need to buy snacks (chips, salsa, pretzels) and a new copy of 'Catan'. Chris, Megan, and Sam are confirmed to be coming.",
+        "ground_truth_id": "mem_96"
+    },
+    {
+        "memory": "My friend Jen recommended a new sci-fi book series, 'The Expanse'. She said it's a great mix of 'hard sci-fi' and 'political drama', and that the first book is called 'Leviathan Wakes'.",
+        "query": "What was that book series Jen recommended?",
+        "answer": "She recommended 'The Expanse' series, starting with 'Leviathan Wakes'. She described it as a mix of 'hard sci-fi' and 'political drama'.",
+        "ground_truth_id": "mem_97"
+    },
+    {
+        "memory": "I'm volunteering at the local animal shelter this Saturday from 9 AM to 12 PM. My role is to help with 'dog walking' and 'socialization'. I need to remember to wear closed-toe shoes and old clothes.",
+        "query": "What are my volunteer duties at the shelter?",
+        "answer": "You are volunteering this Saturday (9 AM - 12 PM) to help with 'dog walking' and 'socialization'. You must wear closed-toe shoes and old clothes.",
+        "ground_truth_id": "mem_98"
+    },
+    {
+        "memory": "I had coffee with my old mentor, Dr. Evans. She gave me some great career advice: 'Don't just climb the ladder, build your own.' She thinks I should consider starting my own consulting side-business.",
+        "query": "What career advice did Dr. Evans give me?",
+        "answer": "She advised, 'Don't just climb the ladder, build your own,' and suggested you should consider starting your own consulting side-business.",
+        "ground_truth_id": "mem_99"
+    },
+    {
+        "memory": "I'm learning about Kubernetes. The core concept I finally grasp is the 'control plane' vs. 'data plane'. The control plane (with the API server, etcd) makes the decisions, and the data plane (kubelet, container runtime on nodes) does the actual work.",
+        "query": "What's the main concept I learned about Kubernetes?",
+        "answer": "You learned the difference between the 'control plane' (which makes decisions, like the API server and etcd) and the 'data plane' (which runs the containers, like the kubelet).",
+        "ground_truth_id": "mem_100"
+    },
+    {
+        "memory": "I watched a documentary on 'AlphaGo'. The most mind-blowing part was 'Move 37', where the AI made a completely novel and creative move that no human grandmaster would have considered. It showed AI can exhibit genuine creativity.",
+        "query": "What was so special about that 'AlphaGo' documentary?",
+        "answer": "The most mind-blowing part was 'Move 37', a highly creative and novel move that showed AI is capable of more than just brute force.",
+        "ground_truth_id": "mem_101"
+    },
+    {
+        "memory": "I'm trying to perfect my 'Neapolitan' pizza dough recipe. The key seems to be using '00' flour and a long, 72-hour cold fermentation in the fridge. This develops a much better flavor and crust structure.",
+        "query": "What's the secret to my new pizza dough recipe?",
+        "answer": "The key is using '00' flour and a 72-hour cold fermentation in the fridge, which improves flavor and crust.",
+        "ground_truth_id": "mem_102"
+    },
+    {
+        "memory": "I've been playing the game 'Cyberpunk 2077' after the 2.0 update. It's so much better. The new 'perk' system completely changes the gameplay, and I'm doing a 'Netrunner' build focused on hacking.",
+        "query": "What do I think of the new Cyberpunk update?",
+        "answer": "You think the 2.0 update is much better. You like the new 'perk' system and are doing a 'Netrunner' build focused on hacking.",
+        "ground_truth_id": "mem_103"
+    },
+    {
+        "memory": "I'm practicing photography. I learned the 'exposure triangle': ISO (sensor sensitivity), Aperture (how much light gets in, controls depth of field), and Shutter Speed (how long the sensor is exposed, controls motion blur).",
+        "query": "What is the 'exposure triangle' in photography?",
+        "answer": "It's the three key settings: ISO (sensor sensitivity), Aperture (light-in/depth of field), and Shutter Speed (exposure time/motion blur).",
+        "ground_truth_id": "mem_104"
+    },
+    {
+        "memory": "I just finished the book 'Atomic Habits' by James Clear. My biggest takeaway is the concept of 'identity-based habits'—focusing on *who* you want to become, not just the *outcome* you want to achieve.",
+        "query": "What was my main takeaway from 'Atomic Habits'?",
+        "answer": "The biggest takeaway was the concept of 'identity-based habits', which means focusing on who you want to become rather than just the outcome.",
+        "ground_truth_id": "mem_105"
+    },
+    {
+        "memory": "I'm building a new 'Lego' set, the 'Millennium Falcon' (Set #75192). It's incredibly detailed, but I'm stuck on 'Bag 12'. The instructions for the mandible framework are really confusing.",
+        "query": "What's frustrating me about my Lego build?",
+        "answer": "You are stuck on 'Bag 12' of the 'Millennium Falcon' set (#75192) because the instructions for the mandible framework are confusing.",
+        "ground_truth_id": "mem_106"
+    },
+    {
+        "memory": "I've been learning to use 'Blender' for 3D modeling. The hardest part is understanding 'UV unwrapping'. It's the process of flattening the 3D model's surface into a 2D texture map, and it's very tedious.",
+        "query": "What's the hardest part of learning Blender?",
+        "answer": "The hardest part is understanding 'UV unwrapping', which is the tedious process of flattening the 3D model surface to a 2D texture map.",
+        "ground_truth_id": "mem_107"
+    },
+    {
+        "memory": "My favorite 'comfort movie' is 'Spirited Away'. I love the art style, the magical world-building, and the soundtrack by Joe Hisaishi. It always makes me feel nostalgic and calm.",
+        "query": "Why do I love 'Spirited Away' so much?",
+        "answer": "It's your comfort movie. You love its art style, magical world-building, and Joe Hisaishi's soundtrack, which make you feel nostalgic and calm.",
+        "ground_truth_id": "mem_108"
+    },
+    {
+        "memory": "I'm modifying my 'Subaru WRX'. I just installed a 'Cobb Accessport' to flash a 'Stage 1' tune. It increases the boost and horsepower, but I have to make sure to only use 91 octane gas or higher from now on.",
+        "query": "What modification did I just do to my car?",
+        "answer": "You installed a 'Cobb Accessport' and flashed a 'Stage 1' tune, which increases horsepower. You must use 91 octane gas or higher now.",
+        "ground_truth_id": "mem_109"
+    },
+    {
+        "memory": "I've decided I strongly prefer mechanical keyboards with 'tactile' switches, not 'linear' or 'clicky' ones. The 'Cherry MX Brown' switch feels like the perfect balance of feedback and quietness for typing. 'Clicky' (Blue) switches are too loud.",
+        "query": "What kind of keyboard switches do I like?",
+        "answer": "You strongly prefer 'tactile' switches, specifically 'Cherry MX Brown', because they offer a good balance of feedback and are quieter than 'clicky' switches.",
+        "ground_truth_id": "mem_110"
+    },
+    {
+        "memory": "The warranty on my 'Sony WH-1000XM5' headphones expires on January 15th, 2026. The left earcup has been making a slight rattling noise. I should probably get them checked before the warranty is up.",
+        "query": "What's that issue with my headphones?",
+        "answer": "Your Sony headphones' warranty expires Jan 15th, 2026. You should get the rattling noise in the left earcup checked before then.",
+        "ground_truth_id": "mem_111"
+    },
+    {
+        "memory": "My apartment's AC unit is making a loud 'clanking' noise. I called the landlord, and they said a technician from 'Rapid Repair' will come on Friday between 1 PM and 4 PM. I have to be home to let them in.",
+        "query": "When is the AC getting fixed?",
+        "answer": "A technician from 'Rapid Repair' is coming to fix the 'clanking' noise on Friday between 1 PM and 4 PM. You must be home.",
+        "ground_truth_id": "mem_112"
+    },
+    {
+        "memory": "I have an idea for a mobile app: 'PlantIQ'. It would use the phone's camera to identify a plant and then use the user's location to give hyper-specific watering and sunlight advice based on the local weather forecast.",
+        "query": "What was that app idea I had about plants?",
+        "answer": "The app, 'PlantIQ', would use the camera to identify a plant and give hyper-specific watering/sunlight advice based on the user's local weather.",
+        "ground_truth_id": "mem_113"
+    },
+    {
+        "memory": "I keep forgetting my new gym locker combination. It's '38-12-24'. I should write this down in a secure note. 38 (right), 12 (left), 24 (right).",
+        "query": "What's my gym locker combo?",
+        "answer": "Your combination is '38-12-24'. (38 right, 12 left, 24 right).",
+        "ground_truth_id": "mem_114"
+    },
+    {
+        "memory": "I think I'm allergic to the new 'Tide' laundry detergent. I've been getting a rash on my arms. I'm going to switch back to 'All Free & Clear' and see if it goes away.",
+        "query": "Why do I have this rash on my arms?",
+        "answer": "You think you're allergic to the new 'Tide' detergent. You're switching back to 'All Free & Clear' to see if it helps.",
+        "ground_truth_id": "mem_115"
+    },
+    {
+        "memory": "I'm trying to organize my digital files using the 'PARA' method (Projects, Areas, Resources, Archives). 'Projects' are for active work with a deadline, and 'Areas' are for ongoing responsibilities without a deadline, like 'Health' or 'Finances'.",
+        "query": "What's the difference between 'Projects' and 'Areas' in my new filing system?",
+        "answer": "You are using the 'PARA' method. 'Projects' are for active work with a deadline, while 'Areas' are for ongoing responsibilities without a deadline (e.g., 'Health').",
+        "ground_truth_id": "mem_116"
+    },
+    {
+        "memory": "My favorite 'quick' weeknight dinner recipe is the 'NYT's' Curried Lentils with Coconut Milk. It only takes 30 minutes, and I just need to add a bag of spinach at the end. It's healthy and simple.",
+        "query": "What's that fast, healthy recipe I like?",
+        "answer": "It's the 'NYT's' 30-minute Curried Lentils with Coconut Milk, to which you add a bag of spinach at the end.",
+        "ground_truth_id": "mem_117"
+    },
+    {
+        "memory": "The public library's website is amazing. I just found out I can use my library card to get free access to 'Kanopy' for streaming movies and 'LinkedIn Learning' for courses.",
+        "query": "What free services do I get with my library card?",
+        "answer": "You discovered your library card gives you free access to 'Kanopy' for streaming movies and 'LinkedIn Learning' for courses.",
+        "ground_truth_id": "mem_118"
+
+    },
+    {
+        "memory": "My neighbor in apartment 3B, Tom, is always playing loud music, specifically techno, on weeknights around 11 PM. I need to remember to file a polite noise complaint with the building management.",
+        "query": "Why am I annoyed with my neighbor?",
+        "answer": "Your neighbor in 3B, Tom, is playing loud techno music late (around 11 PM) on weeknights, and you plan to file a noise complaint.",
+        "ground_truth_id": "mem_119"
+    }
