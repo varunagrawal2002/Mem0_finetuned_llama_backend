@@ -2,7 +2,7 @@ CONFIG = {
     "llm": {
         "provider": "ollama",
         "config": {
-            "model": "llama3.1:8b-instruct-q4_K_M",
+            "model": "fine_tuned:latest", # or "llama3.1:8b-instruct-q4_K_M"
             "temperature": 0.7,
             "top_p": 0.9,
             "ollama_base_url": "http://localhost:11434"
