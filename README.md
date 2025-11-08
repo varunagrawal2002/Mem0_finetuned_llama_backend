@@ -208,10 +208,10 @@ You: What's my name?
 
 ### 1\. Baseline Inference Performance
 
-Tests raw model latency and throughput without memory retrieval:
+Tests raw model latency and throughput without memory retrieval (set the model in benchmarks/mem0_config.py):
 
 ```bash
-python benchmark_baseline.py
+run_benchmark_without_memo.py
 ```
 
 **Measured Metrics:**
@@ -219,7 +219,7 @@ python benchmark_baseline.py
   * Latency (ms): min, max, mean, median, P90, P95, stdev
   * Throughput: tokens/sec, prompts/sec
   * Token statistics: total tokens, avg per prompt
-  * Output: `benchmark_results_without_memo_baseline.json`
+  * Output: `benchmark_results_without_memo_baseline(or finetuned).json`
 
 **Results for llama3.1:8b-instruct-q4_K_M":**
 
@@ -277,10 +277,63 @@ python benchmark_baseline.py
 
 ### 2\. Memory Retrieval Quality
 
-Evaluates Mem0's semantic search accuracy:
+Evaluates Mem0's semantic search accuracy (set the model in benchmarks/mem0_config.py):
+
+### Understanding the Retrieval Metrics
+
+The benchmark evaluates retrieval quality by checking if the correct memory (`ground_truth_id`) is returned within the top 5 search results.
+
+* **Hits@k (or Recall@k):** This shows how often the correct memory was found *within the top 'k' results*.
+    * **Hits@1 (18.0%):** The correct memory was the **#1 top-ranked result** 18% of the time. This is the most important "hit" metric.
+    * **Hits@5 (24.0%):** The correct memory was found **anywhere in the top 5 results** 24% of the time.
+
+* **Precision@5 (4.8%):** Of all the items retrieved (100 queries * 5 results = 500 total), this is the percentage that were the correct one. It's calculated as `Total Hits@5 / (Total Queries * 5)`.
+
+* **Mean Reciprocal Rank (MRR) (0.2037):** This is the most comprehensive metric for ranking quality. It heavily rewards results at the top of the list. It is the average "reciprocal rank" score across all queries:
+    * Correct at Rank 1 = **1.0** points
+    * Correct at Rank 2 = **0.5** points (1/2)
+    * Correct at Rank 3 = **0.33** points (1/3)
+    * ...
+    * Not found in top 5 = **0** points
+    * A perfect score (always #1) is **1.0**.
 
 ```bash
-python benchmark_retrieval_quality.py
+python run_benchmark_retrievel.py
+```
+**Results for llama3.1:8b-instruct-q4_K_M":**
+
+```json
+{
+    "total_queries": 100,
+    "successful_queries": 100,
+    "failed_queries": 0,
+    "hits_at_1": 25,
+    "hits_at_3": 29,
+    "hits_at_5": 32,
+    "recall_at_1_pct": 25.0,
+    "recall_at_3_pct": 29.0,
+    "recall_at_5_pct": 32.0,
+    "precision_at_5_pct": 6.4,
+    "mean_reciprocal_rank": 0.277
+  }
+```
+
+**Results for our fine-tuned model":**
+
+```json
+{
+    "total_queries": 100,
+    "successful_queries": 100,
+    "failed_queries": 0,
+    "hits_at_1": 18,
+    "hits_at_3": 23,
+    "hits_at_5": 24,
+    "recall_at_1_pct": 18.0,
+    "recall_at_3_pct": 23.0,
+    "recall_at_5_pct": 24.0,
+    "precision_at_5_pct": 4.8,
+    "mean_reciprocal_rank": 0.2037
+  }
 ```
 
 ## Key Features
