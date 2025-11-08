@@ -124,7 +124,7 @@ Place the gguf in mem0_backend folder
 Load into Ollama:
 
 ```bash
-cd mem0_backend folder 
+cd mem0_backend
 ollama create fine_tuned:latest -f Modelfile
 ```
 
