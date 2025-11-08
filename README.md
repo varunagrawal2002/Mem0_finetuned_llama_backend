@@ -285,8 +285,7 @@ The benchmark evaluates retrieval quality by checking if the correct memory (`gr
 * **Mean Reciprocal Rank (MRR) (0.2037):** This is the most comprehensive metric for ranking quality. It heavily rewards results at the top of the list. It is the average "reciprocal rank" score across all queries:
     * Correct at Rank 1 = **1.0** points
     * Correct at Rank 2 = **0.5** points (1/2)
-    * Correct at Rank 3 = **0.33** points (1/3)
-    * ...
+    * Correct at Rank 3 = **0.33** points (1/3) ....
     * Not found in top 5 = **0** points
     * A perfect score (always #1) is **1.0**.
 
