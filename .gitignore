@@ -1,1 +1,2 @@
 *.gguf
+*qdrant_chat_db_ret
