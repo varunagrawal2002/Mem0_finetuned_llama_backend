@@ -11,7 +11,8 @@ This project implements a complete pipeline for fine-tuning small LLMs like Llam
 ```plaintext
 .
 ├── finetune_scripts/
-│   └── Unsloth_fine_tuning_lambda_cloud.ipynb  # Fine-tuning notebook
+│   └── Unsloth_fine_tuning_lambda_cloud.ipynb  # Fine-tuning notebook (earlier)
+│   └── Unsloth_fine_tuning_locomo_lambda_cloud.ipynb  # Fine-tuning notebook (latest)
 ├── mem0_backend/
 │   ├── mem0_config.py                      # Mem0 configuration
 │   └── cli_chat.py                         # CLI chat interface
@@ -19,8 +20,9 @@ This project implements a complete pipeline for fine-tuning small LLMs like Llam
 │   ├── run_benchmark_without_memo.py                 # Baseline inference benchmark
 │   └── run_benchmark_retrievel.py        # Memory retrieval evaluation
 ├── data_download/
-│   ├── coqa_mctest_5000_samples.jsonl            # Training dataset for fine-tuning
+│   ├── coqa_mctest_5000_samples.jsonl            # Training dataset for fine-tuning (earlier)
 │   ├── benchmark_prompts_latency.jsonl          # Inference test prompts
+│   ├── mem0_finetune_locomo_dataset.jsonl          # Training dataset for fine-tuning (latest)
 ├── benchmark_test_retreivel_quality.jsonl  # Retrieval test data
 └── README.md
 ````
@@ -73,9 +75,18 @@ cd Mem0_finetuned_llama_backend
 
 ### Dataset Preparation
 
-The project uses a 5,000-sample conversational dataset combining CoQA and MCTest data formatted for instruction fine-tuning. Each sample follows the Llama 3.1 chat template format:
+This iteration uses the LoCoMo dataset instead of previous datasets. A sample of this dataset is attached in the latest benchmark report.
+
+The prior CoQA 5,000-sample conversational dataset is replaced with this to better align with Mem0's hybrid memory setup.
 
 ```json
+# LOCOMO Dataset example (latest)
+
+{"text": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are an expert memory extraction assistant. Your job is to read the following short conversation and extract any new, important facts about the speakers' lives, preferences, or events as a concise, single-line summary. If no important fact is present, output 'None'.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nMelanie: Hey Caroline! Good to see you! I'm swamped with the kids & work. What's up with you? Anything new?\nCaroline: I went to a LGBTQ support group yesterday and it was so powerful.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nCaroline attended an LGBTQ support group recently and found the transgender stories inspiring.<|eot_id|><|end_of_text|>"}
+```
+```json
+# CoQA Dataset example (earlier)
+
 {"text": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are a helpful AI assistant with excellent long-term conversational memory. Use the conversation history to answer questions accurately with specific details.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n**Conversation History:**\n[This is a memory from your past.]\nMy dad runs the Blue Street Zoo. Everyone calls him the Zoo King. That means Mom is the Zoo Queen. And that means that I'm the Zoo Prince! Being a prince is very special. \n\nI spend every morning walking around to see the zoo. It's better than any animal book. I say hello to the lions. I say woof at all of the wolves. I make faces to the penguins. Once I even gave a morning kiss to a bear! My favorite animal is the piggy. I named him Samson. He likes to eat mustard, so I toss some mustard jars into his cage every morning. I don't know why that piggy likes mustard so much. \n\nSometimes I walk around with the Zoo King and Zoo Queen. Then we say hello to the animals together! I really like those days. Everybody who works at the Zoo says hello to us when we walk by. At lunchtime, we all go to the Zoo restaurant and eat pork chops. I hope Samson doesn't get mad about that!\n\nWho has been kissed?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\na bear<|eot_id|><|end_of_text|>", "question": "Who has been kissed?", "answer": "a bear", "source": "mctest"}
 ```
 
@@ -83,8 +94,8 @@ The project uses a 5,000-sample conversational dataset combining CoQA and MCTest
 
   * **Model:** Llama 3.1 8B Instruct (unsloth/Meta-Llama-3.1-8B-Instruct)
   * **LoRA Parameters:**
-      * Rank (r): 16
-      * Alpha: 16
+      * Rank (r): 12
+      * Alpha: 12
       * Dropout: 0
       * Target modules: `q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj`
   * **Training Hyperparameters:**
@@ -103,14 +114,14 @@ The project uses a 5,000-sample conversational dataset combining CoQA and MCTest
 Open the Jupyter notebook:
 
 ```bash
-jupyter notebook Unsloth_fine_tuning_lambda_cloud.ipynb
+jupyter notebook Unsloth_fine_tuning_locomo_lambda_cloud.ipynb
 ```
 
 The training process achieves:
 
-  * **Initial loss:** 1.297
-  * **Final validation loss:** 0.077 (94% reduction)
-  * **Training time:** \~30-40 minutes on A100 GPU
+  * **Initial loss:** 1.38
+  * **Final validation loss:** 0.90 
+  * **Training time:** \~5-10 minutes on A100 GPU
 
 ### Model Export
 
@@ -212,7 +223,8 @@ run_benchmark_without_memo.py
   * Latency (ms): min, max, mean, median, P90, P95, stdev
   * Throughput: tokens/sec, prompts/sec
   * Token statistics: total tokens, avg per prompt
-  * Output: `benchmark_results_without_memo_baseline(or finetuned).json`
+  * Output: `benchmarks/benchmark_results_without_memo_baseline.json` and `benchmarks/benchmark_results_without_memo_finetuned.json` (earlier benchmarks)
+  * Output: `benchmarks/benchmark_results_without_memo_baseline.json` and `benchmarks/benchmark_results_without_memo_finetuned_locomo.json` (latest benchmarks)
 
 **Results for llama3.1:8b-instruct-q4_K_M":**
 
@@ -244,6 +256,35 @@ run_benchmark_without_memo.py
 **Results for our fine-tuned model":**
 
 ```json
+# Latest fine tuning
+
+{"model": "fine_tuned:latest",
+    "backend": "Ollama (Direct Inference)",
+    "total_prompts": 85,
+    "successful": 85,
+    "failed": 0,
+    "inference_latency_ms": {
+      "min": 900.9230136871338,
+      "max": 11089.996099472046,
+      "mean": 3192.804151422837,
+      "median": 2622.8229999542236,
+      "stdev": 1800.0752816852282,
+      "p90": 5907.591819763184,
+      "p95": 6417.375087738037
+    },
+    "throughput": {
+      "tokens_per_second": 9.267162622841111,
+      "prompts_per_second": 0.313204303356459
+    },
+    "token_stats": {
+      "total_tokens": 2515,
+      "avg_tokens_per_prompt": 29.58823529411765
+    }}
+```
+
+```json
+# Earlier fine tuning
+
 {"model": "fine_tuned:latest",
     "backend": "Ollama (Direct Inference)",
     "total_prompts": 85,
@@ -315,6 +356,26 @@ python run_benchmark_retrievel.py
 **Results for our fine-tuned model":**
 
 ```json
+
+# Latest fine-tuning
+{
+    "total_queries": 100,
+    "successful_queries": 100,
+    "failed_queries": 0,
+    "hits_at_1": 53,
+    "hits_at_3": 56,
+    "hits_at_5": 57,
+    "recall_at_1_pct": 53.0,
+    "recall_at_3_pct": 56.0,
+    "recall_at_5_pct": 57.0,
+    "precision_at_5_pct": 11.4,
+    "mean_reciprocal_rank": 0.547
+  }
+```
+
+```json
+
+# Earlier fine-tuning
 {
     "total_queries": 100,
     "successful_queries": 100,
