@@ -410,7 +410,6 @@ python run_benchmark_retrievel.py
 ### 1\. Efficient Fine-Tuning
 
   * Gradient checkpointing enables training on limited hardware
-  * Fast training: 94% loss reduction in 562 steps
 
 ### 2\. Hybrid Memory Architecture
 
