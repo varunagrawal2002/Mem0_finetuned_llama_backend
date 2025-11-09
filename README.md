@@ -21,9 +21,9 @@ This project implements a complete pipeline for fine-tuning small LLMs like Llam
 │   └── run_benchmark_retrievel.py        # Memory retrieval evaluation
 ├── data_download/
 │   ├── coqa_mctest_5000_samples.jsonl            # Training dataset for fine-tuning (earlier)
-│   ├── benchmark_prompts_latency.jsonl          # Inference test prompts
+│   ├── benchmark_prompts_latency.jsonl          # Inference test prompts (Inference benchmarking)
 │   ├── mem0_finetune_locomo_dataset.jsonl          # Training dataset for fine-tuning (latest)
-├── benchmark_test_retreivel_quality.jsonl  # Retrieval test data
+├── benchmark_test_retreivel_quality.jsonl  # Retrieval test data (Memory retrieval benchmarking)
 └── README.md
 ````
 
@@ -212,6 +212,8 @@ You: What's my name?
 
 ### 1. Baseline Inference Performance
 
+Dataset used ~ `data_download/benchmark_prompts_latency.jsonl`
+
 Tests raw model latency and throughput without memory retrieval (set the model in `benchmarks/mem0_config.py`):
 
 ```bash
@@ -322,6 +324,8 @@ run_benchmark_without_memo.py
 ### 2\. Memory Retrieval Quality
 
 Evaluates Mem0's semantic search accuracy (set the model in benchmarks/mem0_config.py):
+
+Dataset used ~ `benchmark_test_retreivel_quality.jsonl`
 
 **Measured Metrics:**
 
