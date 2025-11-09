@@ -83,13 +83,6 @@ def main():
     print("\n" + "="*60)
     print("  AUTO-MEMORY CHAT")
     print("="*60)
-    print("\n✨ New: Conversations automatically saved to memory!")
-    print("\nCommands:")
-    print("  /add <text>    - Manually add to memory")
-    print("  /search <text> - Search memories")
-    print("  /quit          - Exit")
-    print("\nOr just type to chat!\n")
-    print("="*60 + "\n")
     
     chat = SimpleMemoryChat()
     
@@ -97,30 +90,7 @@ def main():
         try:
             user_input = input("You: ").strip()
             
-            if not user_input:
-                continue
-            
-            if user_input == "/quit":
-                print("\n👋 Goodbye!\n")
-                break
-            
-            elif user_input.startswith("/add "):
-                text = user_input[5:].strip()
-                if text:
-                    chat.add_memory(text)
-                else:
-                    print("❌ Usage: /add <text>\n")
-            
-            elif user_input.startswith("/search "):
-                query = user_input[8:].strip()
-                if query:
-                    chat.search_memory(query)
-                else:
-                    print("❌ Usage: /search <text>\n")
-            
-            else:
-                # Chat with auto-search and auto-save
-                chat.chat(user_input)
+            chat.chat(user_input)
         
         except KeyboardInterrupt:
             print("\n\n👋 Goodbye!\n")
