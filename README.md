@@ -345,6 +345,8 @@ Output: `benchmark_results_baseline(or finetuned).json`
 ```bash
 python run_benchmark_retrievel.py
 ```
+---
+
 **Results for llama3.1:8b-instruct-q4_K_M":**
 
 ```json
@@ -362,6 +364,7 @@ python run_benchmark_retrievel.py
     "mean_reciprocal_rank": 0.277
   }
 ```
+---
 
 **Results for our fine-tuned model":**
 
@@ -382,6 +385,7 @@ python run_benchmark_retrievel.py
     "mean_reciprocal_rank": 0.547
   }
 ```
+---
 
 ```json
 
