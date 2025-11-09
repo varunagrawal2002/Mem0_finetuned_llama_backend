@@ -210,9 +210,9 @@ You: What's my name?
 
 ## Benchmarking
 
-### 1\. Baseline Inference Performance
+### 1. Baseline Inference Performance
 
-Tests raw model latency and throughput without memory retrieval (set the model in benchmarks/mem0_config.py):
+Tests raw model latency and throughput without memory retrieval (set the model in `benchmarks/mem0_config.py`):
 
 ```bash
 run_benchmark_without_memo.py
@@ -220,93 +220,103 @@ run_benchmark_without_memo.py
 
 **Measured Metrics:**
 
-  * Latency (ms): min, max, mean, median, P90, P95, stdev
-  * Throughput: tokens/sec, prompts/sec
-  * Token statistics: total tokens, avg per prompt
-  * Output: `benchmarks/benchmark_results_without_memo_baseline.json` and `benchmarks/benchmark_results_without_memo_finetuned.json` (earlier benchmarks)
-  * Output: `benchmarks/benchmark_results_without_memo_baseline.json` and `benchmarks/benchmark_results_without_memo_finetuned_locomo.json` (latest benchmarks)
+* Latency (s): min, max, mean, median, P90, P95, stdev
+* Throughput: tokens/sec, prompts/sec
+* Token statistics: total tokens, avg per prompt
+* Output: `benchmarks/benchmark_results_without_memo_baseline.json` and `benchmarks/benchmark_results_without_memo_finetuned.json` (earlier benchmarks)
+* Output: `benchmarks/benchmark_results_without_memo_baseline.json` and `benchmarks/benchmark_results_without_memo_finetuned_locomo.json` (latest benchmarks)
 
-**Results for llama3.1:8b-instruct-q4_K_M":**
+---
+
+**Results for `llama3.1:8b-instruct-q4_K_M`:**
 
 ```json
-{"model": "llama3.1:8b-instruct-q4_K_M",
-    "backend": "Ollama (Direct Inference)",
-    "total_prompts": 85,
-    "successful": 85,
-    "failed": 0,
-    "inference_latency_ms": {
-      "min": 1138.685941696167,
-      "max": 26432.260990142822,
-      "mean": 4436.906259200153,
-      "median": 3579.1895389556885,
-      "stdev": 3428.128815605243,
-      "p90": 6735.480070114136,
-      "p95": 7500.785827636719
-    },
-    "throughput": {
-      "tokens_per_second": 9.442191292680395,
-      "prompts_per_second": 0.22538226899124786
-    },
-    "token_stats": {
-      "total_tokens": 3561,
-      "avg_tokens_per_prompt": 41.89411764705882
-    }}
+{
+  "model": "llama3.1:8b-instruct-q4_K_M",
+  "backend": "Ollama (Direct Inference)",
+  "total_prompts": 85,
+  "successful": 85,
+  "failed": 0,
+  "inference_latency_s": {
+    "min": 1.139,
+    "max": 26.432,
+    "mean": 4.437,
+    "median": 3.579,
+    "stdev": 3.428,
+    "p90": 6.735,
+    "p95": 7.501
+  },
+  "throughput": {
+    "tokens_per_second": 9.442,
+    "prompts_per_second": 0.225
+  },
+  "token_stats": {
+    "total_tokens": 3561,
+    "avg_tokens_per_prompt": 41.894
+  }
+}
 ```
 
-**Results for our fine-tuned model":**
+---
+
+**Results for our fine-tuned model (latest fine-tuning):**
 
 ```json
-# Latest fine tuning
-
-{"model": "fine_tuned:latest",
-    "backend": "Ollama (Direct Inference)",
-    "total_prompts": 85,
-    "successful": 85,
-    "failed": 0,
-    "inference_latency_ms": {
-      "min": 900.9230136871338,
-      "max": 11089.996099472046,
-      "mean": 3192.804151422837,
-      "median": 2622.8229999542236,
-      "stdev": 1800.0752816852282,
-      "p90": 5907.591819763184,
-      "p95": 6417.375087738037
-    },
-    "throughput": {
-      "tokens_per_second": 9.267162622841111,
-      "prompts_per_second": 0.313204303356459
-    },
-    "token_stats": {
-      "total_tokens": 2515,
-      "avg_tokens_per_prompt": 29.58823529411765
-    }}
+{
+  "model": "fine_tuned:latest",
+  "backend": "Ollama (Direct Inference)",
+  "total_prompts": 85,
+  "successful": 85,
+  "failed": 0,
+  "inference_latency_s": {
+    "min": 0.901,
+    "max": 11.090,
+    "mean": 3.193,
+    "median": 2.623,
+    "stdev": 1.800,
+    "p90": 5.908,
+    "p95": 6.417
+  },
+  "throughput": {
+    "tokens_per_second": 9.267,
+    "prompts_per_second": 0.313
+  },
+  "token_stats": {
+    "total_tokens": 2515,
+    "avg_tokens_per_prompt": 29.588
+  }
+}
 ```
 
-```json
-# Earlier fine tuning
+---
 
-{"model": "fine_tuned:latest",
-    "backend": "Ollama (Direct Inference)",
-    "total_prompts": 85,
-    "successful": 85,
-    "failed": 0,
-    "inference_latency_ms": {
-      "min": 445.6310272216797,
-      "max": 4246.412992477417,
-      "mean": 797.5396016064811,
-      "median": 563.7807846069336,
-      "stdev": 660.8583660364415,
-      "p90": 1022.7198600769043,
-      "p95": 2733.7210178375244
-    },
-    "throughput": {
-      "tokens_per_second": 4.690897433873373,
-      "prompts_per_second": 1.2538562323246438
-    },
-    "token_stats": {
-      "total_tokens": 318,
-      "avg_tokens_per_prompt": 3.7411764705882353
-    }}
+**Results for our fine-tuned model (earlier fine-tuning):**
+
+```json
+{
+  "model": "fine_tuned:latest",
+  "backend": "Ollama (Direct Inference)",
+  "total_prompts": 85,
+  "successful": 85,
+  "failed": 0,
+  "inference_latency_s": {
+    "min": 0.446,
+    "max": 4.246,
+    "mean": 0.798,
+    "median": 0.564,
+    "stdev": 0.661,
+    "p90": 1.023,
+    "p95": 2.734
+  },
+  "throughput": {
+    "tokens_per_second": 4.691,
+    "prompts_per_second": 1.254
+  },
+  "token_stats": {
+    "total_tokens": 318,
+    "avg_tokens_per_prompt": 3.741
+  }
+}
 ```
 
 ### 2\. Memory Retrieval Quality
