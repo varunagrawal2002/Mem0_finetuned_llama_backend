@@ -96,7 +96,7 @@ The prior CoQA 5,000-sample conversational dataset is replaced with this to bett
   * **LoRA Parameters:**
       * Rank (r): 12
       * Alpha: 12
-      * Dropout: 0
+      * Dropout: 0.1
       * Target modules: `q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj`
   * **Training Hyperparameters:**
       * Per-device batch size: 4
@@ -105,8 +105,8 @@ The prior CoQA 5,000-sample conversational dataset is replaced with this to bett
       * Max sequence length: 2048
       * Optimizer: AdamW 8-bit
       * Scheduler: Linear warmup (5 steps) + decay
-      * Training steps: 562 (2 epochs over 4,500 samples)
-      * Evaluation: Every 100 steps
+      * Training steps: 250
+      * Evaluation: Every 20 steps
       * Checkpointing: Best model saved based on validation loss
 
 ### Running Fine-Tuning
@@ -119,7 +119,7 @@ jupyter notebook Unsloth_fine_tuning_locomo_lambda_cloud.ipynb
 
 The training process achieves:
 
-  * **Initial loss:** 1.38
+  * **Initial loss:** 1.29
   * **Final validation loss:** 0.90 
   * **Training time:** \~5-10 minutes on A100 GPU
 
