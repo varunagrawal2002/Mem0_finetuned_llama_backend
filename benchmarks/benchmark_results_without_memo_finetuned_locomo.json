@@ -1,0 +1,794 @@
+{
+  "stats": {
+    "model": "fine_tuned:latest",
+    "backend": "Ollama (Direct Inference)",
+    "total_prompts": 85,
+    "successful": 85,
+    "failed": 0,
+    "inference_latency_ms": {
+      "min": 900.9230136871338,
+      "max": 11089.996099472046,
+      "mean": 3192.804151422837,
+      "median": 2622.8229999542236,
+      "stdev": 1800.0752816852282,
+      "p90": 5907.591819763184,
+      "p95": 6417.375087738037
+    },
+    "throughput": {
+      "tokens_per_second": 9.267162622841111,
+      "prompts_per_second": 0.313204303356459
+    },
+    "token_stats": {
+      "total_tokens": 2515,
+      "avg_tokens_per_prompt": 29.58823529411765
+    }
+  },
+  "responses": [
+    {
+      "prompt_idx": 0,
+      "question": "Did the daddy bird have more than 1 baby bird?",
+      "expected_answer": "Yes",
+      "model_response": "The bird family lived at the yellow house for several summers. During that time, the mommy and daddy birds came back each year to raise their babies. Only one of them had a long tail feather like the daddy bird's, but all of them could do tricks like flying in circles and super-fast speeds.",
+      "inference_latency_ms": 11089.996099472046,
+      "tokens_generated": 62,
+      "inference_speed_tokens_per_sec": 5.590624148456787
+    },
+    {
+      "prompt_idx": 1,
+      "question": "What did the first baby bird inherit from its father?",
+      "expected_answer": "A long tail feather.",
+      "model_response": "The Daddy bird had a long tail feather that made it stand out. It used this to perform wonderful tricks such as flying in circles and at super-fast speed. The first baby bird inherited this feature, which is why it could do similar tricks like its father.",
+      "inference_latency_ms": 4948.641061782837,
+      "tokens_generated": 53,
+      "inference_speed_tokens_per_sec": 10.71001095822169
+    },
+    {
+      "prompt_idx": 2,
+      "question": "Did the long tail feather help the birds do tricks?",
+      "expected_answer": "Yes",
+      "model_response": "The long tail feather helped the birds do tricks. The Daddy Bird's long tail feather allowed it to fly in circles and at super-fast speeds, showcasing its impressive flying abilities.",
+      "inference_latency_ms": 3454.378128051758,
+      "tokens_generated": 36,
+      "inference_speed_tokens_per_sec": 10.421557416559871
+    },
+    {
+      "prompt_idx": 3,
+      "question": "What shape did the father bird fly in?",
+      "expected_answer": "Circles.",
+      "model_response": "So the Daddy bird's long tail feather allowed it to do wonderful tricks, including flying in circles at super-fast speed.",
+      "inference_latency_ms": 2485.1577281951904,
+      "tokens_generated": 25,
+      "inference_speed_tokens_per_sec": 10.05972366114399
+    },
+    {
+      "prompt_idx": 4,
+      "question": "What color was the house they lived at?",
+      "expected_answer": "Yellow",
+      "model_response": "The Daddy bird's family lived in a yellow house.",
+      "inference_latency_ms": 1347.4810123443604,
+      "tokens_generated": 12,
+      "inference_speed_tokens_per_sec": 8.905505821653312
+    },
+    {
+      "prompt_idx": 5,
+      "question": "Was it on a noisy, busy road?",
+      "expected_answer": "unknown",
+      "model_response": "The Daddy bird lived at a quiet street, not a noisy, busy road.",
+      "inference_latency_ms": 1793.7769889831543,
+      "tokens_generated": 17,
+      "inference_speed_tokens_per_sec": 9.477209321119043
+    },
+    {
+      "prompt_idx": 6,
+      "question": "Who was walking together?",
+      "expected_answer": "Billy and Jake",
+      "model_response": "You love playing football with your friends and family during summer because it's warm and perfect for the sport. You find joy in spending time outdoors, soaking up the sunshine and fresh air. It brings you a sense of happiness and relaxation.",
+      "inference_latency_ms": 5998.0199337005615,
+      "tokens_generated": 48,
+      "inference_speed_tokens_per_sec": 8.002640959945216
+    },
+    {
+      "prompt_idx": 7,
+      "question": "Where were they going?",
+      "expected_answer": "to the park",
+      "model_response": "They were heading to the park for a game of touch football.",
+      "inference_latency_ms": 1506.5031051635742,
+      "tokens_generated": 14,
+      "inference_speed_tokens_per_sec": 9.293044237356483
+    },
+    {
+      "prompt_idx": 8,
+      "question": "To do what?",
+      "expected_answer": "play touch football",
+      "model_response": "Gordon and Kevin will most likely be drinking blue or red Gatorade when you meet them at the park.",
+      "inference_latency_ms": 2378.8318634033203,
+      "tokens_generated": 24,
+      "inference_speed_tokens_per_sec": 10.088985425671888
+    },
+    {
+      "prompt_idx": 9,
+      "question": "Why were'nt they going to play any other sports?",
+      "expected_answer": "because the weather was perfect for football",
+      "model_response": "They weren't playing baseball, soccer, or kickball today because the weather was perfect for touch football.",
+      "inference_latency_ms": 2224.858045578003,
+      "tokens_generated": 22,
+      "inference_speed_tokens_per_sec": 9.888271318579585
+    },
+    {
+      "prompt_idx": 10,
+      "question": "Who else was going to play?",
+      "expected_answer": "Kevin and Gordon",
+      "model_response": "Gordon and Kevin were also going to play with Billy and his friend Jake. They all looked forward to playing together at the park!",
+      "inference_latency_ms": 2721.590995788574,
+      "tokens_generated": 28,
+      "inference_speed_tokens_per_sec": 10.288099881035604
+    },
+    {
+      "prompt_idx": 11,
+      "question": "Was there anyone else?",
+      "expected_answer": "No",
+      "model_response": "There were three friends: Billy, Jake, Gordon, and Kevin.",
+      "inference_latency_ms": 1593.4100151062012,
+      "tokens_generated": 15,
+      "inference_speed_tokens_per_sec": 9.413772888204324
+    },
+    {
+      "prompt_idx": 12,
+      "question": "Why was the weather perfect?",
+      "expected_answer": "because Billy loved summertime",
+      "model_response": "The weather was perfect for football because it was a beautiful day, with a summer breeze that made everything feel great.",
+      "inference_latency_ms": 2407.2792530059814,
+      "tokens_generated": 24,
+      "inference_speed_tokens_per_sec": 9.969761493200709
+    },
+    {
+      "prompt_idx": 13,
+      "question": "Does Billy enjoy any other season?",
+      "expected_answer": "Yes",
+      "model_response": "Billy enjoys the fall when leaves start to turn pretty colors.",
+      "inference_latency_ms": 1504.3668746948242,
+      "tokens_generated": 13,
+      "inference_speed_tokens_per_sec": 8.641509075129814
+    },
+    {
+      "prompt_idx": 14,
+      "question": "Which ones?",
+      "expected_answer": "Fall and spring",
+      "model_response": "Billy liked fall when leaves turned pretty colors and spring as well.",
+      "inference_latency_ms": 1519.8793411254883,
+      "tokens_generated": 14,
+      "inference_speed_tokens_per_sec": 9.211257513134456
+    },
+    {
+      "prompt_idx": 15,
+      "question": "Any others?",
+      "expected_answer": "No",
+      "model_response": "Gordon and Kevin were drinking blue or red Gatorade at the park.",
+      "inference_latency_ms": 1793.231725692749,
+      "tokens_generated": 17,
+      "inference_speed_tokens_per_sec": 9.480091031421317
+    },
+    {
+      "prompt_idx": 16,
+      "question": "Why not?",
+      "expected_answer": "because he doesn't like the snow",
+      "model_response": "Billy mentioned that he hated winter because he didn't like the snow.",
+      "inference_latency_ms": 1640.4449939727783,
+      "tokens_generated": 15,
+      "inference_speed_tokens_per_sec": 9.143860388560466
+    },
+    {
+      "prompt_idx": 17,
+      "question": "Was he holding anything?",
+      "expected_answer": "Yes",
+      "model_response": "Billy was holding a bottle of water.",
+      "inference_latency_ms": 1134.3128681182861,
+      "tokens_generated": 9,
+      "inference_speed_tokens_per_sec": 7.934318875294184
+    },
+    {
+      "prompt_idx": 18,
+      "question": "What was it?",
+      "expected_answer": "a bottle of water",
+      "model_response": "They were going to play touch football at the park because there's more room for everyone to have fun without being too close.",
+      "inference_latency_ms": 2622.8229999542236,
+      "tokens_generated": 26,
+      "inference_speed_tokens_per_sec": 9.912983072229343
+    },
+    {
+      "prompt_idx": 19,
+      "question": "Anything else?",
+      "expected_answer": "Yes",
+      "model_response": "Hey Calvin! So I got to meet Billy's friends - Kevin and Gordon! We all had a great time playing football together in the park. It was so much fun! The fresh air and sunshine were awesome, making it an amazing experience.",
+      "inference_latency_ms": 4691.60008430481,
+      "tokens_generated": 50,
+      "inference_speed_tokens_per_sec": 10.657344850697966
+    },
+    {
+      "prompt_idx": 20,
+      "question": "How do you know that?",
+      "expected_answer": "because he had a cap",
+      "model_response": "You mentioned earlier that Billy loved summertime and enjoyed activities like playing in the sprinklers on hot days. He also talked about his preference for summer over other seasons.",
+      "inference_latency_ms": 3414.137125015259,
+      "tokens_generated": 34,
+      "inference_speed_tokens_per_sec": 9.95859239246228
+    },
+    {
+      "prompt_idx": 21,
+      "question": "What id Mabels Aunt want to give her?",
+      "expected_answer": "the best birthday present ever",
+      "model_response": "Mabel's aunt wanted to give her the best birthday present ever, which was a pet - in this case, a gray bunny named Fluffy.",
+      "inference_latency_ms": 5663.174152374268,
+      "tokens_generated": 31,
+      "inference_speed_tokens_per_sec": 5.47396198066827
+    },
+    {
+      "prompt_idx": 22,
+      "question": "So what did she do?",
+      "expected_answer": "brought her to the pet store",
+      "model_response": "Mabel's aunt brought her to the pet store as a birthday present. She wanted to give her the best birthday present ever, considering Mabel's long-time wish for a pet.",
+      "inference_latency_ms": 3636.8019580841064,
+      "tokens_generated": 38,
+      "inference_speed_tokens_per_sec": 10.44874052477102
+    },
+    {
+      "prompt_idx": 23,
+      "question": "Had Mabel been asking for a pet?",
+      "expected_answer": "yes",
+      "model_response": "Mabel had been asking her aunt for a pet for a very long time. She wanted one like her friends who had pets, so that's why her aunt surprised her with Fluffy the bunny on her birthday!",
+      "inference_latency_ms": 4175.210952758789,
+      "tokens_generated": 44,
+      "inference_speed_tokens_per_sec": 10.538389676077758
+    },
+    {
+      "prompt_idx": 24,
+      "question": "For how long?",
+      "expected_answer": "a very long time",
+      "model_response": "Mabel wanted a pet for a very long time! She was excited to get one after seeing all the different animals at the pet store with her aunt.",
+      "inference_latency_ms": 3113.126754760742,
+      "tokens_generated": 32,
+      "inference_speed_tokens_per_sec": 10.279054635685512
+    },
+    {
+      "prompt_idx": 25,
+      "question": "Did any of her friends have pets?",
+      "expected_answer": "Yes",
+      "model_response": "Faith had a hamster named Peaches, Bobby had a rat named Hugo, Melissa had two snakes and a lizard, and Heather had three fish.",
+      "inference_latency_ms": 3104.8967838287354,
+      "tokens_generated": 32,
+      "inference_speed_tokens_per_sec": 10.30630073330164
+    },
+    {
+      "prompt_idx": 26,
+      "question": "What kind of pet did her friend Faith have?",
+      "expected_answer": "a hamster",
+      "model_response": "Melissa had two snakes and a lizard as pets!",
+      "inference_latency_ms": 1353.4080982208252,
+      "tokens_generated": 12,
+      "inference_speed_tokens_per_sec": 8.866505243891375
+    },
+    {
+      "prompt_idx": 27,
+      "question": "What was it's name?",
+      "expected_answer": "Peaches",
+      "model_response": "Mabel named her new pet rabbit 'Fluffy'.",
+      "inference_latency_ms": 1353.3730506896973,
+      "tokens_generated": 12,
+      "inference_speed_tokens_per_sec": 8.866734854728072
+    },
+    {
+      "prompt_idx": 28,
+      "question": "What kind of pet did her firend Bobby have?",
+      "expected_answer": "a rat",
+      "model_response": "Bobby had a rat named Hugo!",
+      "inference_latency_ms": 1090.162754058838,
+      "tokens_generated": 9,
+      "inference_speed_tokens_per_sec": 8.255648036489655
+    },
+    {
+      "prompt_idx": 29,
+      "question": "and what was it's name?",
+      "expected_answer": "a rat named Hugo",
+      "model_response": "Mabel's friend Bobby has a pet rat named Hugo!",
+      "inference_latency_ms": 1496.2396621704102,
+      "tokens_generated": 13,
+      "inference_speed_tokens_per_sec": 8.688447665624974
+    },
+    {
+      "prompt_idx": 30,
+      "question": "How many snakes did Melissa have?",
+      "expected_answer": "two",
+      "model_response": "Melissa had two snakes.",
+      "inference_latency_ms": 900.9230136871338,
+      "tokens_generated": 7,
+      "inference_speed_tokens_per_sec": 7.769809288533627
+    },
+    {
+      "prompt_idx": 31,
+      "question": "Did Milissa have any other pets?",
+      "expected_answer": "a lizard",
+      "model_response": "Melissa had two snakes as well as a lizard.",
+      "inference_latency_ms": 1412.4972820281982,
+      "tokens_generated": 12,
+      "inference_speed_tokens_per_sec": 8.495591568692618
+    },
+    {
+      "prompt_idx": 32,
+      "question": "Who had a fish bowl with three fish?",
+      "expected_answer": "Heather",
+      "model_response": "Melissa had two snakes and a lizard as pets.",
+      "inference_latency_ms": 1397.3498344421387,
+      "tokens_generated": 12,
+      "inference_speed_tokens_per_sec": 8.587684847574865
+    },
+    {
+      "prompt_idx": 33,
+      "question": "What kind of pets did Mable and her aunt see?",
+      "expected_answer": "puppies, kittens, fish, turtles, frogs, and bunnies",
+      "model_response": "Mabel's favorite pet store animals were puppies! She liked them a lot.",
+      "inference_latency_ms": 2076.5938758850098,
+      "tokens_generated": 17,
+      "inference_speed_tokens_per_sec": 8.186482777117352
+    },
+    {
+      "prompt_idx": 34,
+      "question": "What color was the puppy she thought she might like be?",
+      "expected_answer": "black",
+      "model_response": "The black puppy that Mabel thought she might like as a pet!",
+      "inference_latency_ms": 1587.6221656799316,
+      "tokens_generated": 15,
+      "inference_speed_tokens_per_sec": 9.448091822008509
+    },
+    {
+      "prompt_idx": 35,
+      "question": "What was they grey bunnies fur like?",
+      "expected_answer": "fluffy and soft",
+      "model_response": "Mabel chose to get a gray bunny that was fluffy and soft as her pet.",
+      "inference_latency_ms": 1909.4889163970947,
+      "tokens_generated": 18,
+      "inference_speed_tokens_per_sec": 9.426606169551992
+    },
+    {
+      "prompt_idx": 36,
+      "question": "Which one did she want as a pet?",
+      "expected_answer": "The bunny",
+      "model_response": "Mabel wanted a rabbit as her pet because it was fluffy and soft. She named it Fluffy.",
+      "inference_latency_ms": 2221.0299968719482,
+      "tokens_generated": 22,
+      "inference_speed_tokens_per_sec": 9.90531421501931
+    },
+    {
+      "prompt_idx": 37,
+      "question": "What did she get that she needed for the bunny?",
+      "expected_answer": "a cage, a water bowl, and bunny food",
+      "model_response": "Mabel got a cage, a water bowl, and bunny food for her new pet bunny.",
+      "inference_latency_ms": 2358.389139175415,
+      "tokens_generated": 20,
+      "inference_speed_tokens_per_sec": 8.480364697995846
+    },
+    {
+      "prompt_idx": 38,
+      "question": "What did she end up naming the bunny?",
+      "expected_answer": "Fluffy",
+      "model_response": "Mabel was excited to spend time with her new pet, Fluffy. She made sure to take good care of it, feeding it nutritious food and giving it plenty of love and attention. Mabel also created a cozy home for Fluffy by putting soft toys in the cage and adding some fun decorations.",
+      "inference_latency_ms": 5910.270929336548,
+      "tokens_generated": 62,
+      "inference_speed_tokens_per_sec": 10.490212841555769
+    },
+    {
+      "prompt_idx": 39,
+      "question": "Who was looking for a gift?",
+      "expected_answer": "Ms. Star",
+      "model_response": "What kind of gift did Ms. Star end up getting Moon?",
+      "inference_latency_ms": 5495.820045471191,
+      "tokens_generated": 14,
+      "inference_speed_tokens_per_sec": 2.5473905412053375
+    },
+    {
+      "prompt_idx": 40,
+      "question": "Why?",
+      "expected_answer": "Moon's birthday",
+      "model_response": "Ms. Star made Moon a beautiful sweater from her own star dust as a gift for his birthday.",
+      "inference_latency_ms": 2208.88090133667,
+      "tokens_generated": 21,
+      "inference_speed_tokens_per_sec": 9.507076632014057
+    },
+    {
+      "prompt_idx": 41,
+      "question": "Where did she look?",
+      "expected_answer": "all around space",
+      "model_response": "You looked all around space for the right gift for Moon.",
+      "inference_latency_ms": 1524.573802947998,
+      "tokens_generated": 13,
+      "inference_speed_tokens_per_sec": 8.526973226788037
+    },
+    {
+      "prompt_idx": 42,
+      "question": "What was Saturn going to get Moon?",
+      "expected_answer": "a space puppy",
+      "model_response": "As per our conversation, you asked for advice on what to get Moon as a birthday gift. You considered getting him a rainbow but thought everyone already has one. Then, Mars suggested making something special.",
+      "inference_latency_ms": 4016.0880088806152,
+      "tokens_generated": 41,
+      "inference_speed_tokens_per_sec": 10.2089396221742
+    },
+    {
+      "prompt_idx": 43,
+      "question": "Why?",
+      "expected_answer": "He loved dogs",
+      "model_response": "Because he was talking about how much he loved dogs, and Ms. Star thought getting him a space puppy would be a great idea. However, since Saturn was already getting one for Moon, Mars suggested making something special as an alternative gift.",
+      "inference_latency_ms": 4885.746002197266,
+      "tokens_generated": 49,
+      "inference_speed_tokens_per_sec": 10.02917465991135
+    },
+    {
+      "prompt_idx": 44,
+      "question": "Did Ms. Star like that idea?",
+      "expected_answer": "yes",
+      "model_response": "Ms. Star thought it was a great idea to make something for Moon as a gift, and she knew what would be perfect to make for him. She made a beautiful sweater out of her own star dust for Moon's birthday party.",
+      "inference_latency_ms": 4708.933115005493,
+      "tokens_generated": 48,
+      "inference_speed_tokens_per_sec": 10.193391757263047
+    },
+    {
+      "prompt_idx": 45,
+      "question": "What did Saturn suggest to Ms. Star?",
+      "expected_answer": "ask Mars",
+      "model_response": "Saturn suggested asking Mars for help in finding a gift for Moon, as he might know what to get him.",
+      "inference_latency_ms": 2441.909074783325,
+      "tokens_generated": 24,
+      "inference_speed_tokens_per_sec": 9.82837577690298
+    },
+    {
+      "prompt_idx": 46,
+      "question": "What was he getting Moon?",
+      "expected_answer": "a space ship",
+      "model_response": "Mars mentioned that he, Neptune, Uranus and Pluto were going together to get Moon a new house.",
+      "inference_latency_ms": 2357.429027557373,
+      "tokens_generated": 23,
+      "inference_speed_tokens_per_sec": 9.756391276742368
+    },
+    {
+      "prompt_idx": 47,
+      "question": "Who was getting him a house?",
+      "expected_answer": "Neptune, Uranus and Pluto",
+      "model_response": "Hey Audrey! Good to hear from you again. How have you been lately? Anything new happening? I've been busy myself - my friend Ms. Star asked for advice on what gift to get the Moon for his birthday. It was a tough choice but she ended up making him a sweater out of her own star dust. The Moon really appreciated it!",
+      "inference_latency_ms": 6770.570993423462,
+      "tokens_generated": 72,
+      "inference_speed_tokens_per_sec": 10.634258184418508
+    },
+    {
+      "prompt_idx": 48,
+      "question": "What was Mars' suggestion?",
+      "expected_answer": "making him something",
+      "model_response": "Ms. Star appreciated Mars' idea and decided to make Moon a beautiful sweater from her own star dust. It turned out to be the perfect gift for Moon, who was thrilled with it!",
+      "inference_latency_ms": 3802.764892578125,
+      "tokens_generated": 39,
+      "inference_speed_tokens_per_sec": 10.255695816514056
+    },
+    {
+      "prompt_idx": 49,
+      "question": "Did she like that idea?",
+      "expected_answer": "yes",
+      "model_response": "Ms. Star was excited about the idea Mars suggested to make something special for Moon. She found it perfect and made a beautiful sweater out of her own star dust for him as a gift.",
+      "inference_latency_ms": 3784.6250534057617,
+      "tokens_generated": 39,
+      "inference_speed_tokens_per_sec": 10.304851722340137
+    },
+    {
+      "prompt_idx": 50,
+      "question": "What did she make?",
+      "expected_answer": "a sweater",
+      "model_response": "Ms. Star made a sweater for Moon using her own star dust as a gift.",
+      "inference_latency_ms": 1904.5677185058594,
+      "tokens_generated": 18,
+      "inference_speed_tokens_per_sec": 9.450963504789984
+    },
+    {
+      "prompt_idx": 51,
+      "question": "Did he like it?",
+      "expected_answer": "yes",
+      "model_response": "Moon was very happy with the gift and felt grateful for Ms. Star's thoughtfulness. He loved the sweater that she made out of her own star dust, saying it was the perfect gift to keep him warm in space.",
+      "inference_latency_ms": 4423.222064971924,
+      "tokens_generated": 46,
+      "inference_speed_tokens_per_sec": 10.399658738429626
+    },
+    {
+      "prompt_idx": 52,
+      "question": "Was it useful to him?",
+      "expected_answer": "yes",
+      "model_response": "The sweater was very useful and warm for Moon, as it was made from Ms. Star's own star dust and helped keep him cozy in the cold space environment.",
+      "inference_latency_ms": 3349.022150039673,
+      "tokens_generated": 34,
+      "inference_speed_tokens_per_sec": 10.152217117942094
+    },
+    {
+      "prompt_idx": 53,
+      "question": "Why?",
+      "expected_answer": "It was cold in space",
+      "model_response": "Ms. Star thought about it for a little bit before coming up with an idea to make Moon something special. She decided that making him something would be perfect, and she knew just what to do! That night at Moon's birthday party, when Moon opened the gift from Ms. Star, he was overjoyed. He pulled out of the box a beautiful sweater made by Ms. Star using her own star dust.",
+      "inference_latency_ms": 7965.665817260742,
+      "tokens_generated": 85,
+      "inference_speed_tokens_per_sec": 10.670796635205827
+    },
+    {
+      "prompt_idx": 54,
+      "question": "What was the sweater made out of?",
+      "expected_answer": "star dust",
+      "model_response": "Ms. Star made the sweater for Moon out of her own star dust, which she thought would be perfect as a gift for him on his birthday.",
+      "inference_latency_ms": 3082.0679664611816,
+      "tokens_generated": 31,
+      "inference_speed_tokens_per_sec": 10.05818182380776
+    },
+    {
+      "prompt_idx": 55,
+      "question": "Where was I one night?",
+      "expected_answer": "One night I was at my friend's house",
+      "model_response": "At a party with friends.",
+      "inference_latency_ms": 3127.289056777954,
+      "tokens_generated": 7,
+      "inference_speed_tokens_per_sec": 2.2383604051018233
+    },
+    {
+      "prompt_idx": 56,
+      "question": "Was my friend male or female?",
+      "expected_answer": "male",
+      "model_response": "Your friend in the memory was male.",
+      "inference_latency_ms": 1088.9561176300049,
+      "tokens_generated": 9,
+      "inference_speed_tokens_per_sec": 8.264795848328145
+    },
+    {
+      "prompt_idx": 57,
+      "question": "Why was I there?",
+      "expected_answer": "for a party",
+      "model_response": "You were at your friend's house for a party, where an incident involving a suspicious stranger occurred.",
+      "inference_latency_ms": 2254.951238632202,
+      "tokens_generated": 21,
+      "inference_speed_tokens_per_sec": 9.312839958676038
+    },
+    {
+      "prompt_idx": 58,
+      "question": "Were we eating breakfast?",
+      "expected_answer": "no",
+      "model_response": "We were eating dinner at a party at my friend's house when the incident occurred.",
+      "inference_latency_ms": 1881.5460205078125,
+      "tokens_generated": 18,
+      "inference_speed_tokens_per_sec": 9.5666009780308
+    },
+    {
+      "prompt_idx": 59,
+      "question": "What happened next?",
+      "expected_answer": "There was a knock on the door.",
+      "model_response": "After the incident with the stranger, my friend and I were shaken up by it. The memory of it still freaks me out. It made us think about safety measures to protect ourselves from potential threats. We started thinking about how we could make our neighborhood safer for everyone. This experience has taught me the importance of staying vigilant and taking care of oneself.",
+      "inference_latency_ms": 6743.237018585205,
+      "tokens_generated": 72,
+      "inference_speed_tokens_per_sec": 10.677364565646883
+    },
+    {
+      "prompt_idx": 60,
+      "question": "who answered it?",
+      "expected_answer": "I",
+      "model_response": "You! You were the one who opened the door for the stranger, didn't trust him because of his appearance, and eventually called the cops when he came back with a sword.",
+      "inference_latency_ms": 3578.1149864196777,
+      "tokens_generated": 37,
+      "inference_speed_tokens_per_sec": 10.340640292564444
+    },
+    {
+      "prompt_idx": 61,
+      "question": "Who was there?",
+      "expected_answer": "A dude with a scar on his face",
+      "model_response": "Samuel, your friend, was also there. He's the one who got into trouble with the strange guy.",
+      "inference_latency_ms": 2437.368154525757,
+      "tokens_generated": 24,
+      "inference_speed_tokens_per_sec": 9.846686457864928
+    },
+    {
+      "prompt_idx": 62,
+      "question": "Was the visitor male or female?",
+      "expected_answer": "Male",
+      "model_response": "The stranger who showed up at your friend's party was a male with a scar on his face, and later dressed as a superhero when he came back.",
+      "inference_latency_ms": 3142.4190998077393,
+      "tokens_generated": 32,
+      "inference_speed_tokens_per_sec": 10.183237494310621
+    },
+    {
+      "prompt_idx": 63,
+      "question": "Did I trust him?",
+      "expected_answer": "No",
+      "model_response": "You didn't trust the strange guy with a scar on his face from the start because he looked very strange and suspicious.",
+      "inference_latency_ms": 2555.4187297821045,
+      "tokens_generated": 25,
+      "inference_speed_tokens_per_sec": 9.78313248965335
+    },
+    {
+      "prompt_idx": 64,
+      "question": "Why not?",
+      "expected_answer": "He was strange looking.",
+      "model_response": "You think he might have been homeless or in a tough spot, but you're not sure.",
+      "inference_latency_ms": 2073.591947555542,
+      "tokens_generated": 20,
+      "inference_speed_tokens_per_sec": 9.645099183364904
+    },
+    {
+      "prompt_idx": 65,
+      "question": "Where did the guy want to go?",
+      "expected_answer": "outside",
+      "model_response": "The stranger wanted to go outside to talk to your friend.",
+      "inference_latency_ms": 1437.424898147583,
+      "tokens_generated": 13,
+      "inference_speed_tokens_per_sec": 9.043950759968864
+    },
+    {
+      "prompt_idx": 66,
+      "question": "Why?",
+      "expected_answer": "He wanted to talk to your friend.",
+      "model_response": "The stranger in a superhero costume showed up at the party, causing concern for my friend's safety and leading us to call the cops.",
+      "inference_latency_ms": 2796.6957092285156,
+      "tokens_generated": 28,
+      "inference_speed_tokens_per_sec": 10.01181498137456
+    },
+    {
+      "prompt_idx": 67,
+      "question": "What made a noise?",
+      "expected_answer": "The strange guy was beating your friend.",
+      "model_response": "You called the police when you saw him with a sword. The cops came and the guy ran away as soon as he heard the cop car coming, but we never found out what happened to that guy after that day.",
+      "inference_latency_ms": 4349.205017089844,
+      "tokens_generated": 45,
+      "inference_speed_tokens_per_sec": 10.346718497559024
+    },
+    {
+      "prompt_idx": 68,
+      "question": "So what did I do?",
+      "expected_answer": "Ran towards him.",
+      "model_response": "You helped your friend by running towards the strange guy when you saw him trying to beat up your friend, and then called the cops when he came back with a sword.",
+      "inference_latency_ms": 3440.2859210968018,
+      "tokens_generated": 35,
+      "inference_speed_tokens_per_sec": 10.173573011873852
+    },
+    {
+      "prompt_idx": 69,
+      "question": "Did the guy stay?",
+      "expected_answer": "Yes",
+      "model_response": "No, he didn't stay. He left after I asked him to and then came back dressed up as a superhero with a sword. I called the cops when I saw him coming again and he ran away.",
+      "inference_latency_ms": 4117.362976074219,
+      "tokens_generated": 43,
+      "inference_speed_tokens_per_sec": 10.443577661204698
+    },
+    {
+      "prompt_idx": 70,
+      "question": "What was unusual when he returned?",
+      "expected_answer": "he was dressed up as superhero and he also had a sword.",
+      "model_response": "When he returned, he was dressed up as a superhero and had a sword. This unexpected change in appearance made him look even more suspicious.",
+      "inference_latency_ms": 2925.8670806884766,
+      "tokens_generated": 29,
+      "inference_speed_tokens_per_sec": 9.911591743660516
+    },
+    {
+      "prompt_idx": 71,
+      "question": "Who did I call?",
+      "expected_answer": "the cops",
+      "model_response": "You called the police when you saw the strange guy come back with a sword, dressed up as a superhero.",
+      "inference_latency_ms": 2384.9220275878906,
+      "tokens_generated": 23,
+      "inference_speed_tokens_per_sec": 9.643921157146673
+    },
+    {
+      "prompt_idx": 72,
+      "question": "Did they arrest him?",
+      "expected_answer": "No",
+      "model_response": "The cops didn't catch or arrest the stranger. He ran away when he heard the police car approaching.",
+      "inference_latency_ms": 2289.6218299865723,
+      "tokens_generated": 22,
+      "inference_speed_tokens_per_sec": 9.608573656955839
+    },
+    {
+      "prompt_idx": 73,
+      "question": "Why did he run?",
+      "expected_answer": "Because he heard the cop car coming",
+      "model_response": "Yeah, that's right! He must have been spooked when he saw the police car and decided it was time to make a quick exit. It was quite an eventful evening, huh? Anything else you want to chat about or any other memories you'd like to share?",
+      "inference_latency_ms": 5907.591819763184,
+      "tokens_generated": 58,
+      "inference_speed_tokens_per_sec": 9.81787533220686
+    },
+    {
+      "prompt_idx": 74,
+      "question": "Did I see him again?",
+      "expected_answer": "No",
+      "model_response": "You mentioned earlier that you didn't see him again after the incident with the cops.",
+      "inference_latency_ms": 2043.590784072876,
+      "tokens_generated": 18,
+      "inference_speed_tokens_per_sec": 8.80802562836284
+    },
+    {
+      "prompt_idx": 75,
+      "question": "What was the tigers name?",
+      "expected_answer": "Timmy",
+      "model_response": "So it seems like you have a strong bond with animals, especially Timmy the tiger. How long have you known them?",
+      "inference_latency_ms": 5093.9977169036865,
+      "tokens_generated": 26,
+      "inference_speed_tokens_per_sec": 5.104046260900904
+    },
+    {
+      "prompt_idx": 76,
+      "question": "What kind of animal was Buster?",
+      "expected_answer": "a bear",
+      "model_response": "Buster, the bear, was a friend to Timmy the tiger and Henry the hamster. As a nurse's son, Buster knew how to set a broken bone and fix it, which he used to help out his new friends.",
+      "inference_latency_ms": 4749.482154846191,
+      "tokens_generated": 49,
+      "inference_speed_tokens_per_sec": 10.31691422400698
+    },
+    {
+      "prompt_idx": 77,
+      "question": "Where were they going for a walk?",
+      "expected_answer": "the park by the river",
+      "model_response": "You're interested in knowing more about Henry, right? He was a hamster with a broken leg who needed help from Timmy and Buster. After Buster fixed his leg, they all became best friends and went to the river together for some water. They even had a great time playing together!",
+      "inference_latency_ms": 6016.003847122192,
+      "tokens_generated": 60,
+      "inference_speed_tokens_per_sec": 9.973397877513246
+    },
+    {
+      "prompt_idx": 78,
+      "question": "What were they going to do later?",
+      "expected_answer": "to swim",
+      "model_response": "Timmy, Buster, and Henry were going to go swimming later in the river.",
+      "inference_latency_ms": 2095.4108238220215,
+      "tokens_generated": 18,
+      "inference_speed_tokens_per_sec": 8.59020092640739
+    },
+    {
+      "prompt_idx": 79,
+      "question": "What did Timmy wonder into as he ran through a field?",
+      "expected_answer": "a hamster with a broken leg",
+      "model_response": "Timmy helped fix Henry's broken leg using skills learned from Buster's mom, who was a nurse.",
+      "inference_latency_ms": 2450.420379638672,
+      "tokens_generated": 22,
+      "inference_speed_tokens_per_sec": 8.978051351027379
+    },
+    {
+      "prompt_idx": 80,
+      "question": "Did it look like the hamster had somewhere to go?",
+      "expected_answer": "yes",
+      "model_response": "The hamster looked like he had somewhere to go but couldn't make it because of his broken leg. Timmy and Buster came across him while going for a walk in the park by the river.",
+      "inference_latency_ms": 4191.864013671875,
+      "tokens_generated": 41,
+      "inference_speed_tokens_per_sec": 9.780851636951347
+    },
+    {
+      "prompt_idx": 81,
+      "question": "Could it make it there?",
+      "expected_answer": "no",
+      "model_response": "Timmy was unable to make it to the party because he had a broken leg from running into something. He sent Buster a card wishing everyone well at the party.",
+      "inference_latency_ms": 3582.935094833374,
+      "tokens_generated": 34,
+      "inference_speed_tokens_per_sec": 9.48942671303991
+    },
+    {
+      "prompt_idx": 82,
+      "question": "Why not?",
+      "expected_answer": "because of its leg",
+      "model_response": "Timmy came upon a small hamster with a broken leg, which led him to meet Henry. Buster's mom was a nurse, so Buster knew how to set a broken bone and fix it. After fixing Henry's leg, they all went to the river for a drink of water and became best friends.",
+      "inference_latency_ms": 6417.375087738037,
+      "tokens_generated": 63,
+      "inference_speed_tokens_per_sec": 9.817097978327133
+    },
+    {
+      "prompt_idx": 83,
+      "question": "Who did Timmy call over to talk to the hamster?",
+      "expected_answer": "Buster",
+      "model_response": "Sam recently mentioned that she enjoys trying new recipes in her cooking class. She appreciates how they challenge her creativity and help her improve her culinary skills.",
+      "inference_latency_ms": 3289.194107055664,
+      "tokens_generated": 31,
+      "inference_speed_tokens_per_sec": 9.424801027553153
+    },
+    {
+      "prompt_idx": 84,
+      "question": "Did they become friends with the Hamster?",
+      "expected_answer": "yes",
+      "model_response": "Timmy, Buster, and Henry became best friends after Buster fixed Henry's broken leg. They went on to play together at the river.",
+      "inference_latency_ms": 3173.0430126190186,
+      "tokens_generated": 29,
+      "inference_speed_tokens_per_sec": 9.139491612521036
+    }
+  ],
+  "errors": []
+}
