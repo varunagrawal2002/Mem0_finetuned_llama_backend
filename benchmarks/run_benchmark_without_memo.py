@@ -4,10 +4,11 @@ import ollama
 import statistics
 from datetime import datetime
 from typing import List, Dict, Any
+from mem0_config import CONFIG
 
-BASELINE_LLM_MODEL = "llama3.1:8b-instruct-q4_K_M"
-BENCHMARK_PROMPTS_FILE = "/Users/varunagrawal/Desktop/Mem0/data_download/benchmark_prompts.jsonl"
-OUTPUT_FILE = "benchmark_results_without_memo_baseline.json"
+BASELINE_LLM_MODEL = CONFIG["llm"]["config"]["model"]
+BENCHMARK_PROMPTS_FILE = "/Users/varunagrawal/Desktop/Mem0/data_download/benchmark_prompts_latency.jsonl"
+OUTPUT_FILE = "benchmark_results_without_memo_finetuned.json"
 
 
 def load_benchmark_prompts(filepath: str) -> List[Dict[str, Any]]:
